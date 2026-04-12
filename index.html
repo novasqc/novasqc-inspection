@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaSQC | Third-Party Inspection Services for Africa & Middle East</title>
-    <meta name="description" content="Professional third-party inspection services for pipeline, oil & gas, and industrial projects across Africa and Middle East. API 1169 certified inspectors.">
+    <meta name="description" content="Professional third-party inspection services for pipeline, oil & gas, and industrial projects across Africa and Middle East. API 1169 certified.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #0f2b46;
-            --secondary: #1a4a7a;
-            --accent: #d4a853;
-            --accent-dark: #b8923f;
-            --light: #f5f7fa;
-            --dark: #0a1628;
-            --text: #2c3e50;
-            --text-light: #6b7c93;
-            --white: #ffffff;
-            --border: #e1e8ed;
+            /* Cybernetics-inspired dark theme */
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(99, 179, 237, 0.3);
+            
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --accent: #63b3ed;
+            --accent-glow: rgba(99, 179, 237, 0.15);
+            --accent-secondary: #4299e1;
+            
+            --success: #48bb78;
+            --warning: #ed8936;
+            
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            
+            --radius: 16px;
+            --radius-sm: 8px;
+            --radius-lg: 24px;
         }
 
         * {
@@ -36,1187 +51,881 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            color: var(--text);
+            font-family: var(--font-sans);
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.6;
-            background: var(--white);
+            min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            line-height: 1.2;
+        /* Animated background grid */
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(99, 179, 237, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 179, 237, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Gradient orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 179, 237, 0.08) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(72, 187, 120, 0.06) 0%, transparent 70%);
+            bottom: -100px;
+            left: -100px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
+            position: relative;
+            z-index: 1;
         }
 
-        /* Header */
-        .header {
+        /* Navigation */
+        nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
+            z-index: 100;
+            padding: 20px 0;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            padding: 16px 0;
         }
 
-        .header-inner {
+        nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .logo span {
-            color: var(--accent);
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            font-weight: 600;
         }
 
-        .nav {
+        .nav-links {
             display: flex;
             gap: 32px;
             list-style: none;
         }
 
-        .nav a {
-            color: var(--text);
+        .nav-links a {
+            color: var(--text-secondary);
             text-decoration: none;
+            font-size: 0.9rem;
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
+            transition: color 0.2s;
         }
 
-        .nav a:hover {
+        .nav-links a:hover {
             color: var(--accent);
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
+        .nav-cta {
             background: var(--accent);
-            color: var(--white);
-            text-decoration: none;
+            color: var(--bg-primary);
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
             font-weight: 600;
-            font-size: 0.95rem;
-            border-radius: 4px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.2s;
         }
 
-        .btn:hover {
-            background: var(--accent-dark);
-            color: var(--white);
+        .nav-cta:hover {
+            background: var(--accent-secondary);
             transform: translateY(-2px);
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-        }
-
-        .btn-outline:hover {
-            background: var(--accent);
-            color: var(--white);
-        }
-
-        .btn-white {
-            background: var(--white);
-            color: var(--primary);
-        }
-
-        .btn-white:hover {
-            background: var(--light);
-        }
-
-        /* Hero */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--dark) 100%);
             display: flex;
             align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
+            padding: 120px 0 80px;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 720px;
+            max-width: 800px;
         }
 
         .hero-badge {
-            display: inline-block;
-            background: rgba(212, 168, 83, 0.2);
-            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             padding: 8px 16px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border-radius: 20px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
             margin-bottom: 24px;
-            border: 1px solid rgba(212, 168, 83, 0.3);
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            color: var(--white);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
             margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero h1 span {
-            color: var(--accent);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .hero-desc {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.85);
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
             margin-bottom: 40px;
-            line-height: 1.7;
         }
 
-        .hero-btns {
+        .hero-actions {
             display: flex;
             gap: 16px;
             flex-wrap: wrap;
         }
 
-        .hero-stats {
-            display: flex;
-            gap: 48px;
-            margin-top: 64px;
-            padding-top: 48px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        .btn {
+            padding: 14px 28px;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px var(--accent-glow);
+        }
+
+        .btn-secondary {
+            background: var(--bg-glass);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-card);
+            border-color: var(--accent);
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 24px;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
         }
 
         .stat {
-            text-align: left;
+            text-align: center;
         }
 
-        .stat-number {
-            font-family: 'Playfair Display', serif;
+        .stat-value {
             font-size: 2.5rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--accent);
+            font-family: var(--font-mono);
         }
 
         .stat-label {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            color: var(--text-muted);
             margin-top: 4px;
         }
 
-        /* Coverage */
-        .coverage {
-            background: var(--light);
-            padding: 80px 0;
-        }
-
-        .coverage-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        .region-card {
-            background: var(--white);
-            border-radius: 8px;
-            padding: 32px;
-            border: 1px solid var(--border);
-            transition: all 0.3s;
-        }
-
-        .region-card:hover {
-            border-color: var(--accent);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            transform: translateY(-4px);
-        }
-
-        .region-icon {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 1.75rem;
-        }
-
-        .region-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
-            color: var(--primary);
-        }
-
-        .region-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        .region-list {
-            list-style: none;
-            margin-top: 16px;
-        }
-
-        .region-list li {
-            padding: 6px 0;
-            color: var(--text);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .region-list li::before {
-            content: '✓';
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        /* Services */
-        .services {
+        /* Section */
+        section {
             padding: 100px 0;
-            background: var(--white);
         }
 
         .section-header {
             text-align: center;
-            max-width: 640px;
-            margin: 0 auto 64px;
+            max-width: 600px;
+            margin: 0 auto 60px;
         }
 
         .section-label {
-            color: var(--accent);
+            font-size: 0.8rem;
             font-weight: 600;
-            font-size: 0.9rem;
+            color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 16px;
         }
 
-        .section-header h2 {
-            font-size: clamp(2rem, 4vw, 2.75rem);
-            color: var(--primary);
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
             margin-bottom: 16px;
         }
 
-        .section-header p {
-            color: var(--text-light);
-            font-size: 1.1rem;
+        .section-description {
+            color: var(--text-secondary);
         }
 
+        /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
 
         .service-card {
-            background: var(--light);
-            border-radius: 12px;
-            padding: 40px;
-            border: 1px solid transparent;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
             transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
         }
 
         .service-card:hover {
-            background: var(--white);
-            border-color: var(--accent);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border-color: var(--border-glow);
+            transform: translateY(-4px);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
         }
 
         .service-icon {
-            width: 72px;
-            height: 72px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            font-size: 2rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.35rem;
-            color: var(--primary);
-            margin-bottom: 16px;
-        }
-
-        .service-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        .service-list {
-            list-style: none;
-        }
-
-        .service-list li {
-            padding: 8px 0;
-            color: var(--text);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .service-list li::before {
-            content: '→';
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        /* Certifications */
-        .certifications {
-            padding: 80px 0;
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .certifications .section-header h2 {
-            color: var(--white);
-        }
-
-        .certifications .section-header p {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        .cert-item {
-            text-align: center;
-            padding: 32px 24px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s;
-        }
-
-        .cert-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--accent);
-        }
-
-        .cert-icon {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-        }
-
-        .cert-item h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--accent);
-        }
-
-        .cert-item p {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Why Us */
-        .why-us {
-            padding: 100px 0;
-            background: var(--light);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .why-content h2 {
-            font-size: clamp(1.75rem, 3vw, 2.5rem);
-            color: var(--primary);
-            margin-bottom: 24px;
-        }
-
-        .why-content p {
-            color: var(--text-light);
-            font-size: 1.05rem;
-            margin-bottom: 32px;
-        }
-
-        .why-list {
-            list-style: none;
-        }
-
-        .why-list li {
-            display: flex;
-            gap: 16px;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .why-list li:last-child {
-            border-bottom: none;
-        }
-
-        .why-num {
-            width: 40px;
-            height: 40px;
-            background: var(--accent);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-
-        .why-text h4 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .why-text p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        /* Contact */
-        .contact {
-            padding: 100px 0;
-            background: var(--white);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-        }
-
-        .contact-info h2 {
-            font-size: clamp(1.75rem, 3vw, 2.25rem);
-            color: var(--primary);
-            margin-bottom: 24px;
-        }
-
-        .contact-info > p {
-            color: var(--text-light);
-            font-size: 1.05rem;
-            margin-bottom: 40px;
-        }
-
-        .info-item {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .info-icon {
             width: 48px;
             height: 48px;
-            background: var(--light);
-            border-radius: 12px;
+            background: var(--accent-glow);
+            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
-            flex-shrink: 0;
-        }
-
-        .info-text h4 {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 500;
-            margin-bottom: 4px;
-        }
-
-        .info-text p {
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .contact-form {
-            background: var(--light);
-            padding: 48px;
-            border-radius: 16px;
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 16px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s;
-            background: var(--white);
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 64px 0 32px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 48px;
-        }
-
-        .footer-brand .logo {
             font-size: 1.5rem;
-            color: var(--white);
-            margin-bottom: 16px;
-            display: inline-block;
-        }
-
-        .footer-brand p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .footer h4 {
-            color: var(--accent);
-            font-size: 1rem;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
             margin-bottom: 20px;
         }
 
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 600;
             margin-bottom: 12px;
         }
 
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
+        .service-description {
+            color: var(--text-secondary);
             font-size: 0.9rem;
-            transition: color 0.3s;
         }
 
-        .footer-links a:hover {
-            color: var(--accent);
-        }
-
-        .footer-bottom {
-            padding-top: 32px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        .service-tags {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .tag {
+            padding: 4px 10px;
+            background: var(--bg-glass);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
             align-items: center;
-            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        .feature-list .check {
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .control-diagram {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+        }
+
+        .diagram-title {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .diagram-box {
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .diagram-box.highlight {
+            border-color: var(--accent);
+            background: var(--accent-glow);
+            color: var(--text-primary);
+        }
+
+        .diagram-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .diagram-arrow {
+            color: var(--text-muted);
+        }
+
+        /* Certifications */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 16px;
+        }
+
+        .cert-badge {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .cert-badge:hover {
+            border-color: var(--accent);
+        }
+
+        .cert-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .cert-type {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 60px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .contact p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-secondary);
+        }
+
+        .contact-item strong {
+            color: var(--text-primary);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
             font-size: 0.85rem;
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .why-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
         }
 
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .nav {
+            .nav-links {
                 display: none;
             }
 
-            .hero-stats {
-                flex-direction: column;
-                gap: 24px;
+            .hero {
+                padding-top: 100px;
             }
 
-            .services-grid {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-grid {
                 grid-template-columns: 1fr;
             }
 
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 16px;
-                text-align: center;
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
         }
 
-        .animate {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        /* Scroll indicator */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-10px); }
-            60% { transform: translateX(-50%) translateY(-5px); }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container header-inner">
-            <a href="#" class="logo">Nova<span>SQC</span></a>
-            <nav>
-                <ul class="nav">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#coverage">Coverage</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#contact" class="btn">Get Quote</a>
-        </div>
-    </header>
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
 
-    <!-- Hero -->
-    <section class="hero">
+    <nav>
         <div class="container">
-            <div class="hero-content">
-                <span class="hero-badge">🌍 Serving Africa & Middle East</span>
-                <h1>Trusted Third-Party <span>Inspection Services</span></h1>
-                <p class="hero-desc">
-                    Professional pipeline, oil & gas, and industrial inspection services 
-                    with API 1169 certified inspectors. Ensuring quality, safety, and compliance 
-                    across your projects in Africa and Middle East.
-                </p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn">Request Inspection</a>
-                    <a href="#services" class="btn btn-outline" style="border-color: white; color: white;">Our Services</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Years Experience</div>
+            <a href="#" class="logo">
+                <div class="logo-icon">NS</div>
+                <span>NovaSQC</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Get Quote</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="dot"></span>
+                        API 1169 Certified
                     </div>
-                    <div class="stat">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Projects Completed</div>
+                    <h1>Precision Inspection for <span>Critical Infrastructure</span></h1>
+                    <p class="hero-description">
+                        Third-party inspection services for pipeline, oil & gas, and industrial projects across Africa and Middle East. Ensuring safety, compliance, and operational excellence.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Request Inspection</a>
+                        <a href="#services" class="btn btn-secondary">Our Services</a>
                     </div>
-                    <div class="stat">
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label">Countries Served</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-        </div>
-    </section>
-
-    <!-- Coverage -->
-    <section class="coverage" id="coverage">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Our Coverage</div>
-                <h2>Serving Projects Across Africa & Middle East</h2>
-                <p>Extensive network of certified inspectors ready to support your projects wherever you operate.</p>
-            </div>
-            <div class="coverage-grid">
-                <div class="region-card">
-                    <div class="region-icon">🌍</div>
-                    <h3>East Africa</h3>
-                    <p>Comprehensive inspection coverage in emerging energy markets.</p>
-                    <ul class="region-list">
-                        <li>Kenya</li>
-                        <li>Tanzania</li>
-                        <li>Uganda</li>
-                        <li>Mozambique</li>
-                        <li>Ethiopia</li>
-                    </ul>
-                </div>
-                <div class="region-card">
-                    <div class="region-icon">🏛️</div>
-                    <h3>North Africa</h3>
-                    <p>Established presence in major oil and gas hubs.</p>
-                    <ul class="region-list">
-                        <li>Egypt</li>
-                        <li>Algeria</li>
-                        <li>Libya</li>
-                        <li>Morocco</li>
-                        <li>Tunisia</li>
-                    </ul>
-                </div>
-                <div class="region-card">
-                    <div class="region-icon">⚡</div>
-                    <h3>West Africa</h3>
-                    <p>Supporting energy infrastructure development.</p>
-                    <ul class="region-list">
-                        <li>Nigeria</li>
-                        <li>Ghana</li>
-                        <li>Senegal</li>
-                        <li>Ivory Coast</li>
-                        <li>Cameroon</li>
-                    </ul>
-                </div>
-                <div class="region-card">
-                    <div class="region-icon">🛢️</div>
-                    <h3>Middle East</h3>
-                    <p>Professional services in key hydrocarbon regions.</p>
-                    <ul class="region-list">
-                        <li>UAE</li>
-                        <li>Saudi Arabia</li>
-                        <li>Qatar</li>
-                        <li>Oman</li>
-                        <li>Kuwait</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Our Services</div>
-                <h2>Comprehensive Inspection Solutions</h2>
-                <p>From pre-construction to project completion, we provide end-to-end inspection services.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3>Pipeline Inspection</h3>
-                    <p>Comprehensive inspection services for pipeline construction and maintenance projects.</p>
-                    <ul class="service-list">
-                        <li>API 1169 Certified Inspectors</li>
-                        <li>Welding Inspection (CWI)</li>
-                        <li>Coating & Corrosion Inspection</li>
-                        <li>Hydrostatic Testing Support</li>
-                        <li>In-Line Inspection (ILI) Support</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏭</div>
-                    <h3>Oil & Gas Facilities</h3>
-                    <p>Expert inspection services for refineries, terminals, and processing facilities.</p>
-                    <ul class="service-list">
-                        <li>Construction Inspection</li>
-                        <li>Pre-Startup Review (PSR)</li>
-                        <li>Commissioning Support</li>
-                        <li>NDT Coordination</li>
-                        <li>Safety Audits</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚙️</div>
-                    <h3>Industrial Inspection</h3>
-                    <p>Wide range of industrial inspection services for various sectors.</p>
-                    <ul class="service-list">
-                        <li>Pressure Vessel Inspection</li>
-                        <li>Storage Tank Inspection</li>
-                        <li>Structural Steel Inspection</li>
-                        <li>Equipment Certification</li>
-                        <li>Quality Control</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📋</div>
-                    <h3>Third-Party Verification</h3>
-                    <p>Independent verification and validation services for your projects.</p>
-                    <ul class="service-list">
-                        <li>Vendor Inspection</li>
-                        <li>Factory Acceptance Testing (FAT)</li>
-                        <li>Site Acceptance Testing (SAT)</li>
-                        <li>Material Verification</li>
-                        <li>Document Review</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎓</div>
-                    <h3>Training & Consulting</h3>
-                    <p>Professional development and technical consulting services.</p>
-                    <ul class="service-list">
-                        <li>API 1169 Preparation</li>
-                        <li>CWI Certification Training</li>
-                        <li>NACE Coating Inspection</li>
-                        <li>Project Management</li>
-                        <li>QA/QC Systems Setup</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔬</div>
-                    <h3>NDT Services</h3>
-                    <p>Non-destructive testing coordination and supervision.</p>
-                    <ul class="service-list">
-                        <li>UT Thickness Survey</li>
-                        <li>MT/PT Magnetic & Liquid Penetrant</li>
-                        <li>VT Visual Testing</li>
-                        <li>RT Radiographic Testing</li>
-                        <li>PAUT Advanced Ultrasonic</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="certifications" id="certifications">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Certifications</div>
-                <h2>Industry-Leading Credentials</h2>
-                <p>Our inspectors hold globally recognized certifications to ensure the highest standards.</p>
-            </div>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <div class="cert-icon">📜</div>
-                    <h4>API 1169</h4>
-                    <p>Pipeline Construction Inspector</p>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">🏆</div>
-                    <h4>ASNT Level II/III</h4>
-                    <p>NDT Technicians</p>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">⚡</div>
-                    <h4>NACE CP Specialist</h4>
-                    <p>Coating Inspection</p>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">🔧</div>
-                    <h4>CWI/CWE</h4>
-                    <p>Welding Inspection</p>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">🎯</div>
-                    <h4>API 510/570</h4>
-                    <p>Pressure Equipment Inspection</p>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">🌐</div>
-                    <h4>ISO 9001</h4>
-                    <p>Quality Management</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Us -->
-    <section class="why-us" id="about">
-        <div class="container">
-            <div class="why-grid">
-                <div class="why-content">
-                    <div class="section-label">Why Choose Us</div>
-                    <h2>Your Trusted Partner for Project Success</h2>
-                    <p>We combine deep industry expertise with a commitment to safety and quality, delivering results that exceed expectations.</p>
-                    <ul class="why-list">
-                        <li>
-                            <span class="why-num">1</span>
-                            <div class="why-text">
-                                <h4>Experienced Team</h4>
-                                <p>15+ years of combined experience in pipeline and industrial inspection across diverse projects.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="why-num">2</span>
-                            <div class="why-text">
-                                <h4>Rapid Response</h4>
-                                <p>Quick mobilization of certified inspectors to meet your project schedule and deadlines.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="why-num">3</span>
-                            <div class="why-text">
-                                <h4>Comprehensive Coverage</h4>
-                                <p>Extensive network across Africa and Middle East with local knowledge and international standards.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="why-num">4</span>
-                            <div class="why-text">
-                                <h4>Quality Assurance</h4>
-                                <p>Robust QA/QC systems ensuring consistent, reliable inspection services on every project.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="why-image">
-                    <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 16px; padding: 48px; color: white; text-align: center;">
-                        <div style="font-size: 4rem; margin-bottom: 24px;">🏗️</div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Your Project Success is Our Priority</h3>
-                        <p style="opacity: 0.9; font-size: 1rem;">We understand the challenges of managing complex projects. Our inspector network provides the expertise you need, when and where you need it.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="section-label">Contact Us</div>
-                    <h2>Ready to Discuss Your Project?</h2>
-                    <p>Contact our team to discuss your inspection needs. We'll respond within 24 hours with a tailored solution.</p>
                     
-                    <div class="info-item">
-                        <div class="info-icon">📧</div>
-                        <div class="info-text">
-                            <h4>Email</h4>
-                            <p>info@novasqc.com</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-value">500+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">15+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Countries Served</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Compliance Rate</div>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">📱</div>
-                        <div class="info-text">
-                            <h4>Phone</h4>
-                            <p>+971 4 XXX XXXX</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">🌍</div>
-                        <div class="info-text">
-                            <h4>Office</h4>
-                            <p>Dubai, UAE | Lagos, Nigeria | Nairobi, Kenya</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" placeholder="Your name">
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" id="company" placeholder="Company name">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" placeholder="your@email.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" placeholder="+1 234 567 8900">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Required</label>
-                            <select id="service">
-                                <option value="">Select a service</option>
-                                <option value="pipeline">Pipeline Inspection</option>
-                                <option value="oilgas">Oil & Gas Facilities</option>
-                                <option value="industrial">Industrial Inspection</option>
-                                <option value="verification">Third-Party Verification</option>
-                                <option value="training">Training & Consulting</option>
-                                <option value="ndt">NDT Services</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="location">Project Location</label>
-                            <select id="location">
-                                <option value="">Select region</option>
-                                <optgroup label="Africa">
-                                    <option value="east-africa">East Africa</option>
-                                    <option value="west-africa">West Africa</option>
-                                    <option value="north-africa">North Africa</option>
-                                    <option value="southern-africa">Southern Africa</option>
-                                </optgroup>
-                                <optgroup label="Middle East">
-                                    <option value="uae">UAE</option>
-                                    <option value="saudi">Saudi Arabia</option>
-                                    <option value="qatar">Qatar</option>
-                                    <option value="other-me">Other Middle East</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" placeholder="Tell us about your project and inspection requirements..."></textarea>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Send Request</button>
-                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+        <section id="services">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Services</div>
+                    <h2 class="section-title">Comprehensive Inspection Solutions</h2>
+                    <p class="section-description">
+                        From pipeline integrity to industrial safety, we provide end-to-end inspection services tailored to your project requirements.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔍</div>
+                        <h3 class="service-title">Pipeline Inspection</h3>
+                        <p class="service-description">
+                            Comprehensive inspection services for onshore and offshore pipelines. Internal inspection, corrosion monitoring, and integrity assessment.
+                        </p>
+                        <div class="service-tags">
+                            <span class="tag">API 1169</span>
+                            <span class="tag">NDT</span>
+                            <span class="tag">Integrity</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3 class="service-title">Oil & Gas Facilities</h3>
+                        <p class="service-description">
+                            Inspection of refining, processing, and storage facilities. Safety systems, pressure vessels, and environmental compliance.
+                        </p>
+                        <div class="service-tags">
+                            <span class="tag">ASME</span>
+                            <span class="tag">Safety</span>
+                            <span class="tag">Environmental</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🏗️</div>
+                        <h3 class="service-title">Industrial NDT</h3>
+                        <p class="service-description">
+                            Non-destructive testing services including ultrasonic, magnetic particle, liquid penetrant, and radiographic testing.
+                        </p>
+                        <div class="service-tags">
+                            <span class="tag">UT</span>
+                            <span class="tag">MT</span>
+                            <span class="tag">PT</span>
+                            <span class="tag">RT</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">✅</div>
+                        <h3 class="service-title">Third-Party Verification</h3>
+                        <p class="service-description">
+                            Independent verification and validation of materials, equipment, and construction to ensure regulatory compliance.
+                        </p>
+                        <div class="service-tags">
+                            <span class="tag">IV&V</span>
+                            <span class="tag">QA/QC</span>
+                            <span class="tag">Compliance</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3 class="service-title">Welding Inspection</h3>
+                        <p class="service-description">
+                            AWS-certified welding inspectors for weld qualification, procedure review, and fabrication inspection.
+                        </p>
+                        <div class="service-tags">
+                            <span class="tag">AWS CWI</span>
+                            <span class="tag">WPS</span>
+                            <span class="tag">PQR</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🛡️</div>
+                        <h3 class="service-title">Corrosion Management</h3>
+                        <p class="service-description">
+                            Corrosion surveys, cathodic protection testing, and mitigation strategy development for infrastructure longevity.
+                        </p>
+                        <div class="service-tags">
+                            <span class="tag">NACE</span>
+                            <span class="tag">CP</span>
+                            <span class="tag">ICM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <div class="section-label">About Us</div>
+                        <h2>Precision Through Control Theory</h2>
+                        <p>
+                            At NovaSQC, we apply engineering principles to inspection — treating each project as a system requiring precise control and feedback mechanisms to ensure optimal outcomes.
+                        </p>
+                        <p>
+                            Our inspectors combine technical expertise with systematic methodologies, ensuring every inspection delivers actionable insights and documented compliance.
+                        </p>
+                        <ul class="feature-list">
+                            <li><span class="check">✓</span> Independent third-party立场，确保客观评估</li>
+                            <li><span class="check">✓</span> 全球化本地服务网络，快速响应</li>
+                            <li><span class="check">✓</span> 全程可追溯的检验记录和报告系统</li>
+                            <li><span class="check">✓</span> 严格的质量管理和持续改进流程</li>
+                        </ul>
+                    </div>
+                    <div class="about-visual">
+                        <div class="control-diagram">
+                            <div class="diagram-title">Inspection Control Loop</div>
+                            <div class="diagram-row">
+                                <div class="diagram-box">Project Input</div>
+                                <span class="diagram-arrow">→</span>
+                                <div class="diagram-box highlight">Inspection System</div>
+                                <span class="diagram-arrow">→</span>
+                                <div class="diagram-box">Verified Output</div>
+                            </div>
+                            <div class="diagram-row">
+                                <span class="diagram-arrow">↑</span>
+                                <span class="diagram-arrow">↓</span>
+                            </div>
+                            <div class="diagram-row">
+                                <div class="diagram-box">Feedback Report</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Certifications</div>
+                    <h2 class="section-title">Industry-Leading Credentials</h2>
+                    <p class="section-description">
+                        Our team holds globally recognized certifications ensuring the highest standards of inspection competence.
+                    </p>
+                </div>
+
+                <div class="certs-grid">
+                    <div class="cert-badge">
+                        <div class="cert-name">API 1169</div>
+                        <div class="cert-type">Pipeline Inspection</div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">ASNT SNT-TC-1A</div>
+                        <div class="cert-type">NDT Level III</div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">AWS CWI</div>
+                        <div class="cert-type">Welding Inspection</div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">NACE CIP</div>
+                        <div class="cert-type">Corrosion Inspection</div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">ISO 9001</div>
+                        <div class="cert-type">Quality Management</div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">ISO 17025</div>
+                        <div class="cert-type">Laboratory Competence</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <h2>Start Your Project</h2>
+                    <p>Contact us for inspection services or project consultation. We typically respond within 24 hours.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <span>contact@novasqc.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Service Area:</strong>
+                            <span>Africa & Middle East</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions" style="justify-content: center; margin-top: 32px;">
+                        <a href="mailto:contact@novasqc.com" class="btn btn-primary">Send Inquiry</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="logo">Nova<span>SQC</span></a>
-                    <p>Professional third-party inspection services for pipeline, oil & gas, and industrial projects across Africa and Middle East. Your trusted partner for quality, safety, and compliance.</p>
-                </div>
-                <div>
-                    <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">Pipeline Inspection</a></li>
-                        <li><a href="#services">Oil & Gas Facilities</a></li>
-                        <li><a href="#services">Industrial Inspection</a></li>
-                        <li><a href="#services">NDT Services</a></li>
-                        <li><a href="#services">Training</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Coverage</h4>
-                    <ul class="footer-links">
-                        <li><a href="#coverage">East Africa</a></li>
-                        <li><a href="#coverage">West Africa</a></li>
-                        <li><a href="#coverage">North Africa</a></li>
-                        <li><a href="#coverage">Middle East</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#certifications">Certifications</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NovaSQC. All rights reserved.</p>
-                <p>Professional Third-Party Inspection Services</p>
-            </div>
+            <p>&copy; 2026 NovaSQC. Third-Party Inspection Services. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scroll for navigation
+        // Simple fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
-        });
-
-        // Header scroll effect
-        const header = document.querySelector('.header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                header.style.boxShadow = 'none';
-            }
-        });
-
-        // Form submission (placeholder)
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your inquiry! Our team will contact you within 24 hours.');
         });
     </script>
 </body>
