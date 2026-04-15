@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSQC | Huduma za Upimaji wa Watu wa Tatu kwa Afrika na Mashariki ya Kati</title>
+    <meta name="description" content="Huduma za kitaalamu za upimaji wa watu wa tatu kwa mabomba, mafuta & gesi, na miradi ya viwandani Afrika na Mashariki ya Kati. Wasogeaji walioidhinishwa wa API 1169.">
+    <meta name="keywords" content="upimaji watu wa tatu, upimaji mabomba, mafuta na gesi, Afrika, Mashariki ya Kati, msogeaji aliyoidhinishwa API 1169, uchunguzi visichomwisho, ukagua ufinyuaji, Kenya, Tanzania, Uganda">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://novasqc.github.io/novasqc-inspection/sw/">
+    <meta name="geo.region" content="Afrika, Mashariki ya Kati">
+
+    <link rel="alternate" hreflang="en" href="https://novasqc.github.io/novasqc-inspection/">
+    <link rel="alternate" hreflang="fr" href="https://novasqc.github.io/novasqc-inspection/fr/">
+    <link rel="alternate" hreflang="pt" href="https://novasqc.github.io/novasqc-inspection/pt/">
+    <link rel="alternate" hreflang="sw" href="https://novasqc.github.io/novasqc-inspection/sw/">
+    <link rel="alternate" hreflang="ar" href="https://novasqc.github.io/novasqc-inspection/ar/">
+    <link rel="alternate" hreflang="x-default" href="https://novasqc.github.io/novasqc-inspection/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://novasqc.github.io/novasqc-inspection/sw/">
+    <meta property="og:title" content="NovaSQC | Upimaji Watu wa Tatu — Afrika & Mashariki ya Kati">
+    <meta property="og:description" content="Wasogeaji walioidhinishwa API 1169 kwa mabomba, mafuta na gesi Afrika na Mashariki ya Kati.">
+    <meta property="og:locale" content="sw_TZ">
+    <meta property="og:image" content="https://novasqc.github.io/novasqc-inspection/1200x400-蓝.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="../图标蓝-128x128.png">
+
+    <style>
+        :root { --bg-primary: #070d1f; --bg-secondary: #0d1b3e; --bg-card: rgba(255,255,255,0.05); --bg-glass: rgba(32,112,240,0.08); --border: rgba(255,255,255,0.1); --accent: #2070F0; --accent-light: #3B82F6; --accent-glow: rgba(32,112,240,0.2); --text-primary: #f8faff; --text-secondary: #b8c5e8; --text-muted: #7a8ab8; --success: #10B981; --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; --font-mono: 'JetBrains Mono', monospace; --radius: 16px; --radius-sm: 8px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; } html { scroll-behavior: smooth; } body { font-family: var(--font-sans); background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
+        .bg-grid { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(32,112,240,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(32,112,240,0.04) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
+        .orb { position: fixed; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: 0; }
+        .orb-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(32,112,240,0.1) 0%, transparent 70%); top: -200px; right: -100px; }
+        .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%); bottom: -100px; left: -100px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+        .lang-bar { background: var(--bg-secondary); border-bottom: 1px solid var(--border); padding: 8px 0; text-align: right; }
+        .lang-bar .container { display: flex; justify-content: flex-end; align-items: center; gap: 16px; }
+        .lang-bar a { color: var(--text-muted); text-decoration: none; font-size: 0.8rem; padding: 4px 8px; border-radius: 4px; transition: all 0.2s; }
+        .lang-bar a:hover, .lang-bar a.active { color: var(--accent); background: var(--bg-glass); }
+
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 16px 0; background: rgba(7,13,31,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo img { height: 36px; width: auto; }
+        .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-cta { background: var(--accent); color: #fff; padding: 10px 20px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.875rem; text-decoration: none; transition: all 0.2s; }
+        .nav-cta:hover { background: var(--accent-light); transform: translateY(-2px); }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
+
+        .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; }
+        .hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: 100px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 24px; }
+        .hero-badge .dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.5;} }
+        .hero h1 { font-size: clamp(2.2rem,5vw,3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+        .hero h1 span { color: var(--accent); }
+        .hero p { font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 32px; max-width: 520px; }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+        .btn { padding: 14px 28px; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; display: inline-block; }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 10px 40px var(--accent-glow); }
+        .btn-secondary { background: var(--bg-glass); color: var(--text-primary); border: 1px solid var(--border); }
+        .btn-secondary:hover { background: var(--bg-card); border-color: var(--accent); }
+        .hero-image { display: flex; justify-content: center; align-items: center; }
+        .hero-image img { width: 280px; height: 280px; border-radius: 24px; box-shadow: 0 0 80px rgba(32,112,240,0.3); object-fit: cover; }
+        .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; padding-top: 40px; border-top: 1px solid var(--border); }
+        .stat { text-align: center; }
+        .stat-value { font-size: 2rem; font-weight: 800; color: var(--accent); font-family: var(--font-mono); }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+
+        section { padding: 100px 0; }
+        .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 16px; text-align: center; }
+        .section-subtitle { text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto 60px; }
+
+        .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 24px; }
+        .coverage-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: all 0.3s; }
+        .coverage-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .coverage-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--accent); }
+        .coverage-card p { color: var(--text-secondary); font-size: 0.9rem; }
+        .coverage-card .countries { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .coverage-card .countries span { background: var(--bg-glass); padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; color: var(--text-muted); }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 24px; }
+        .service-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: all 0.3s; }
+        .service-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .service-icon { width: 56px; height: 56px; background: linear-gradient(135deg, var(--accent), var(--accent-light)); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.5rem; }
+        .service-card h3 { font-size: 1.2rem; margin-bottom: 12px; }
+        .service-card p { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 24px; }
+        .pricing-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px 32px; text-align: center; transition: all 0.3s; }
+        .pricing-card.featured { border-color: var(--accent); box-shadow: 0 0 60px var(--accent-glow); position: relative; }
+        .pricing-card.featured::before { content: 'Maalum Zaidi'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; padding: 4px 16px; border-radius: 100px; font-size: 0.75rem; font-weight: 600; }
+        .pricing-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+        .pricing-card .price { font-size: 2.5rem; font-weight: 800; color: var(--accent); font-family: var(--font-mono); margin: 20px 0; }
+        .pricing-card .price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+        .pricing-card ul { list-style: none; text-align: left; margin: 24px 0; }
+        .pricing-card li { padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+        .pricing-card li::before { content: '✓ '; color: var(--success); font-weight: 600; }
+
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 16px; overflow: hidden; }
+        .faq-item summary { padding: 20px 24px; cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item summary::after { content: '+'; font-size: 1.5rem; color: var(--accent); }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item .answer { padding: 0 24px 20px; color: var(--text-secondary); font-size: 0.9rem; }
+
+        .steps-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; position: relative; }
+        .steps-grid::before { content: ''; position: absolute; top: 40px; left: 12.5%; right: 12.5%; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+        .step { text-align: center; position: relative; z-index: 1; }
+        .step-num { width: 80px; height: 80px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 800; margin: 0 auto 20px; box-shadow: 0 0 40px var(--accent-glow); }
+        .step h4 { font-size: 1rem; margin-bottom: 8px; }
+        .step p { color: var(--text-secondary); font-size: 0.8rem; }
+
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-info h3 { font-size: 1.3rem; margin-bottom: 20px; }
+        .contact-info p { color: var(--text-secondary); margin-bottom: 24px; }
+        .contact-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+        .contact-item .icon { width: 40px; height: 40px; background: var(--bg-glass); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
+        .contact-form { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-size: 0.875rem; font-weight: 500; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.9rem; font-family: var(--font-sans); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+        footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand p { color: var(--text-secondary); font-size: 0.875rem; margin-top: 16px; }
+        .footer-col h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem; }
+
+        @media(max-width:768px) {
+            .hero .container { grid-template-columns: 1fr; text-align: center; }
+            .hero p { margin: 0 auto 32px; }
+            .hero-actions { justify-content: center; }
+            .hero-image { order: -1; }
+            .stats { grid-template-columns: repeat(2,1fr); }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: repeat(2,1fr); gap: 32px; }
+            .steps-grid::before { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="lang-bar">
+        <div class="container">
+            <a href="../">EN</a>
+            <a href="../fr/">FR</a>
+            <a href="../pt/">PT</a>
+            <a href="./" class="active">SW</a>
+            <a href="../ar/">AR</a>
+        </div>
+    </div>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo"><img src="../180x60-蓝.png" alt="NovaSQC"></a>
+            <ul class="nav-links">
+                <li><a href="#coverage">Eneo</a></li>
+                <li><a href="#services">Huduma</a></li>
+                <li><a href="#pricing">Bei</a></li>
+                <li><a href="#faq">Maswali</a></li>
+                <li><a href="#contact" class="nav-cta">Omba Bei</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge"><span class="dot"></span> Iliidhinishwa na API 1169 · Afrika & Mashariki ya Kati</div>
+                <h1>Upimaji wa Watu wa Tatu kwa <span>Miundombinu Muhimu</span></h1>
+                <p>Huduma za kitaalamu za upimaji kwa mabomba, mafuta & gesi, na miradi ya viwandani Afrika na Mashariki ya Kati. Usalama, ushirikiano, na ubora wa kiopereti.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Omba Upimaji</a>
+                    <a href="#services" class="btn btn-secondary">Huduma Zetu</a>
+                </div>
+                <div class="stats">
+                    <div class="stat"><div class="stat-value">15+</div><div class="stat-label">Miaka ya K经验的</div></div>
+                    <div class="stat"><div class="stat-value">500+</div><div class="stat-label">Miradi Iliyokamilika</div></div>
+                    <div class="stat"><div class="stat-value">25+</div><div class="stat-label">Nchi</div></div>
+                    <div class="stat"><div class="stat-value">100%</div><div class="stat-label">Ushirikiano</div></div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../800x800-蓝.png" alt="NovaSQC">
+            </div>
+        </div>
+    </section>
+
+    <section id="coverage">
+        <div class="container">
+            <h2 class="section-title">Huduma Afrika & Mashariki ya Kati</h2>
+            <p class="section-subtitle">Mtandao wa wasogeaji walioidhinishwa wameandaliwa kusaidia miradi yako popote unavyofanya kazi.</p>
+            <div class="coverage-grid">
+                <div class="coverage-card"><h3>🌍 Afrika ya Mashariki</h3><p>Miundombinu ya mafuta na gesi inayokua na maendeleo ya viwandani.</p><div class="countries"><span>Kenya</span><span>Tanzania</span><span>Uganda</span><span>Ethiopia</span><span>Rwanda</span></div></div>
+                <div class="coverage-card"><h3>🌍 Afrika ya Magharibi</h3><p>Sekta iliyoegemea ya mafuta na gesi na mtandao mpana wa mabomba.</p><div class="countries"><span>Nigeria</span><span>Ghana</span><span>Cote d'Ivoire</span><span>Senegal</span><span>Cameroon</span></div></div>
+                <div class="coverage-card"><h3>🌍 Afrika ya Kaskazini</h3><p>Miundombinu ya nishati iliyoanzishwa kuunganisha Ulaya na Afrika.</p><div class="countries"><span>Misri</span><span>Aljeria</span><span>Morocco</span><span>Libya</span><span>Tunisia</span></div></div>
+                <div class="coverage-card"><h3>🌍 Mashariki ya Kati</h3><p>Mikoa ya mafuta na gesi ya daraja la kwanza duniani.</p><div class="countries"><span>Saudi Arabia</span><span>UAE</span><span>Qatar</span><span>Kuwait</span><span>Oman</span></div></div>
+                <div class="coverage-card"><h3>🌍 Afrika ya Kusini</h3><p>Miundombinu ya viwandani na migodi inayoendelea.</p><div class="countries"><span>Afrika Kusini</span><span>Mozambique</span><span>Zambia</span><span>Botswana</span><span>Namibia</span></div></div>
+                <div class="coverage-card"><h3>🌍 Afrika ya Kati</h3><p>Miradi mpya ya mafuta na gesi katika Bonde la Kongo.</p><div class="countries"><span>Angola</span><span>DR Congo</span><span>Gabon</span><span>Guinea ya Ikwinatorial</span><span>Chad</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Huduma Zetu</h2>
+            <p class="section-subtitle">Sulthioni za upimaji kamili kwa kila awamu ya mzunguko wa mradi wako.</p>
+            <div class="services-grid">
+                <div class="service-card"><div class="service-icon">🔧</div><h3>Upimaji wa Mabomba</h3><p>Wasogeaji walioidhinishwa na API 1169 kwa ujenzi wa mabomba, usogeaji, kote, na tathmini ya utimilifu.</p></div>
+                <div class="service-card"><div class="service-icon">⚡</div><h3>Mafuta & Gesi</h3><p>Upimaji kamili wa migodi, vituo, hifadhi, na vituo vya usindikaji. Kuzingatia viwango vya kimataifa.</p></div>
+                <div class="service-card"><div class="service-icon">🔬</div><h3>NDT ya Viwandani</h3><p>Huduma za ENDS: ultrasonics, chembe za sumaku, kazi ya kijidonge, na X-ray kwa miundombinu muhimu.</p></div>
+                <div class="service-card"><div class="service-icon">🔥</div><h3>Upimaji wa Usogeaji</h3><p>Wasogeaji walioidhinishwa na CWI wakisua ubora wa usogeaji na utii wa taratibu.</p></div>
+                <div class="service-card"><div class="service-icon">🎨</div><h3>Upimaji wa Kote</h3><p>Wasogeaji walioidhinishwa na NACE wakithiri utayari wa uso, kote, na ulinzi wa kutu wa muda mrefu.</p></div>
+                <div class="service-card"><div class="service-icon">📋</div><h3>Ukaguzi wa Kiwanda</h3><p>Ukaguzi wa kina wa viwanda vya uzalishaji: uwezo, mifumo ya usimamizi wa ubora, na utii wa kisheria.</p></div>
+                <div class="service-card"><div class="service-icon">✅</div><h3>Ukaguzi wa Watu wa Tatu</h3><p>Huduma za uhakiki wa kujitegemea zinazthiri kwamba nyenzo, kazi, na hati zinaendana na vigezo vya mradi.</p></div>
+                <div class="service-card"><div class="service-icon">📊</div><h3>Usimamizi wa ITP</h3><p>Maendeleo, ukaguzi, na usimamizi wa Mpango wa Upimaji na Mtihani kwa miradi yako yote.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title">Bei Zetu</h2>
+            <p class="section-subtitle">Bei wazi, zote zimejumuishwa, hakuna gharama zinazofichwa.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Upimaji wa Bomba</h3>
+                    <div class="price">$800 <span>/ siku</span></div>
+                    <ul>
+                        <li>Msogeaji aliyeidhinishwa na API 1169</li>
+                        <li>Siku nzima mahali pa mradi</li>
+                        <li>Rapoti ya picha & video</li>
+                        <li>Kutoa ndani ya saa 12</li>
+                        <li>Upimaji wa usogeaji na kote</li>
+                        <li>Hati za ushirikiano</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width:100%">Omba Bei</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Mafuta & Gesi</h3>
+                    <div class="price">$1,200 <span>/ siku</span></div>
+                    <ul>
+                        <li>Msogeaji senia aliyetuma</li>
+                        <li>Upimaji kamili wa aina nyingi</li>
+                        <li>Rapoti ya kiufundi ya kina</li>
+                        <li>Uratibu wa NDT</li>
+                        <li>Ukaguzi wa utii wa kisheria</li>
+                        <li>Mapendekezo ya uboreshaji</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width:100%">Omba Bei</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Ukaguzi wa Kiwanda / ITP</h3>
+                    <div class="price">$600 <span>/ siku</span></div>
+                    <ul>
+                        <li>Ukaguzi wa mfumo wa usimamizi wa ubora</li>
+                        <li>Tathmini ya uwezo wa uzalishaji</li>
+                        <li>Ukaguzi wa hati</li>
+                        <li>Rapoti ya ukaguzi ya kina</li>
+                        <li>Mapendekezo ya hatua za marekebisho</li>
+                        <li>Msaada wa baada ya ukaguzi</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width:100%">Omba Bei</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Maswali Yanayoulizwa Mara kwa Mara</h2>
+            <p class="section-subtitle">Pata majibu ya maswali yanayokamatana sana.</p>
+            <div class="faq-list">
+                <details class="faq-item"><summary>Ni taratibu gani za kuhuti upimaji?</summary><div class="answer">1. Jaza fomu yetu ya uwasilishaji na mahitaji yako ya upimaji.<br>2. Tuwasiliane na muuzaji wako ndani ya masaa 24 kuthiri tarehe.<br>3. Baada ya uthibitisho wa malipo, tunaagiza upimaji.<br>4. Utapokea ripoti ndani ya masaa 12 baada ya kumalizika.</div></details>
+                <details class="faq-item"><summary>Je, kuna ada za ziada tofauti na bei zilizoorodheshwa?</summary><div class="answer">Hapana. Bei zote zilizoorodheshwa ni pamoja. Hakuna gharama zinazofichwa. Bei inajumuisha muda wa msogeaji, safarizaenda, mali, na ripoti.</div></details>
+                <details class="faq-item"><summary>Muzaji wangu anapendekeza kampuni yake ya upimaji — nitumie?</summary><div class="answer">Hatupendi. Kampuni ya kweli ya upimaji ya watu wa tatu hairudhiwi kamwe na muuzaji — hii huumiza mgongono wa maslahi ambapo msogeaji anaweza kushinikizwa kukubali kazi isiyokubalika.</div></details>
+                <details class="faq-item"><summary>Ni vyeti gani wasogeaji wenu wanawa?</summary><div class="answer">Wasogeaji wetu wana vyeti vinavyojulikana kimataifa: API 1169, CWI (usogeaji), NACE (kote), na ISO 9001. Wote wana uzoefu wa angalau miaka 4+ mahali pa kazi.</div></details>
+                <details class="faq-item"><summary>Wasogeaji wenu wanasema lugha gani?</summary><div class="answer">Wasogeaji wetu wanasema Kiingereza, Kifaransa, Kireno, Kiarabu, na Kiswahili. Tunaorodhesha wasogeaji kwa mradi wako ili kuhakikisha mawasiliano mema.</div></details>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Omba Upimaji</h2>
+            <p class="section-subtitle">Tuambie kuhusu mradi wako, tutajibu ndani ya masaa 24.</p>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Wasiliana Nasi</h3>
+                    <p>Iwe unahitaji upimaji moja au msaada endelevu wa ubora, timu yetu iko tayari kusaidia.</p>
+                    <div class="contact-item"><div class="icon">📧</div><div><strong>Barua Pepe</strong><br><a href="mailto:info@novasqc.com" style="color:var(--accent)">info@novasqc.com</a></div></div>
+                    <div class="contact-item"><div class="icon">🌍</div><div><strong>Tovuti</strong><br><a href="https://novasqc.github.io/novasqc-inspection/" style="color:var(--accent)">novasqc.github.io/novasqc-inspection</a></div></div>
+                    <div class="contact-item"><div class="icon">📍</div><div><strong>Ofisi</strong><br>Shenzhen, Guangdong, Uchina<br>Huduma Afrika & Mashariki ya Kati</div></div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group"><label>Jina Lako *</label><input type="text" id="name" placeholder="Jina kamili" required></div>
+                        <div class="form-group"><label>Kampuni</label><input type="text" id="company" placeholder="Jina la kampuni"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Barua Pepe *</label><input type="email" id="email" placeholder="yako@barua.com" required></div>
+                        <div class="form-group"><label>Simu</label><input type="tel" id="phone" placeholder="+254 xxx xxx xxx"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Aina ya Huduma *</label><select id="service" required><option value="">Chagua...</option><option>Upimaji wa Bomba</option><option>Mafuta & Gesi</option><option>NDT ya Viwandani</option><option>Upimaji wa Usogeaji</option><option>Upimaji wa Kote</option><option>Ukaguzi wa Kiwanda</option><option>Nyingine</option></select></div>
+                        <div class="form-group"><label>Nchi / Eneo *</label><select id="location" required><option value="">Chagua...</option><optgroup label="Afrika ya Mashariki"><option>Kenya</option><option>Tanzania</option><option>Uganda</option><option>Ethiopia</option><option>Rwanda</option></optgroup><optgroup label="Afrika ya Magharibi"><option>Nigeria</option><option>Ghana</option><option>Cote d'Ivoire</option></optgroup></select></div>
+                    </div>
+                    <div class="form-group"><label>Maelezo ya Mradi</label><textarea id="message" placeholder="Tuambie kuhusu mradi wako, ratiba, na mahitaji ya upimaji..."></textarea></div>
+                    <button type="submit" class="btn btn-primary" style="width:100%">Wasilisha Ombi</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="#" class="logo"><img src="../180x60-蓝.png" alt="NovaSQC"></a><p>Huduma za kitaalamu za upimaji wa watu wa tatu kwa mabomba, mafuta & gesi, na miradi ya viwandani Afrika na Mashariki ya Kati.</p></div>
+                <div class="footer-col"><h4>Huduma</h4><ul><li><a href="#services">Upimaji wa Bomba</a></li><li><a href="#services">Mafuta & Gesi</a></li><li><a href="#services">NDT</a></li><li><a href="#services">Upimaji wa Usogeaji</a></li></ul></div>
+                <div class="footer-col"><h4>Eneo</h4><ul><li><a href="#coverage">Afrika ya Mashariki</a></li><li><a href="#coverage">Afrika ya Magharibi</a></li><li><a href="#coverage">Afrika ya Kaskazini</a></li><li><a href="#coverage">Mashariki ya Kati</a></li></ul></div>
+                <div class="footer-col"><h4>Lugha</h4><ul><li><a href="../">English</a></li><li><a href="../fr/">Français</a></li><li><a href="../pt/">Português</a></li><li><a href="./">Kiswahili</a></li><li><a href="../ar/">العربية</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>© 2024 NovaSQC — Shenzhen NovaSQC Inspection Testing Technology Services Co., Ltd. Haki zote zimehifadhiwa.</p></div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const location = document.getElementById('location').value;
+            const message = document.getElementById('message').value;
+            const body = encodeURIComponent(`Jina: ${name}\nBarua Pepe: ${email}\nHuduma: ${service}\nNchi: ${location}\n\nUjumbe:\n${message}`);
+            window.location.href = `mailto:info@novasqc.com?subject=Ombi la Upimaji - ${service} - ${location}&body=${body}`;
+        });
+    </script>
+</body>
+</html>
