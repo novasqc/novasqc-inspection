@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaSQC | Third-Party Inspection Services for Africa & Middle East</title>
-    <meta name="description" content="Professional third-party inspection services across Africa and Middle East. Product inspections, factory audits, loading supervision. Certified inspectors. 10+ anos de experiência, 500+ projects completed.">
+    <meta name="description" content="Professional third-party inspection services across Africa and Middle East. Product inspections, factory audits, loading supervision. Certified inspectors. 10+ years experience, 500+ projects completed.">
     <meta name="keywords" content="third-party inspection, product inspection, factory audit, loading inspection, Africa inspection services, Middle East inspection, quality control, Nigeria, Egypt, Kenya, Saudi Arabia, UAE">
     <meta name="author" content="NovaSQC">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://novasqc.github.io/novasqc-inspection/pt/">
 
     <meta name="geo.region" content="Africa, Middle East">
-    <meta name="geo.placename" content="Africa, Middle East">
 
     <link rel="alternate" hreflang="pt" href="https://novasqc.github.io/novasqc-inspection/">
+    <link rel="alternate" hreflang="zh" href="https://novasqc.github.io/novasqc-inspection/zh/">
     <link rel="alternate" hreflang="fr" href="https://novasqc.github.io/novasqc-inspection/fr/">
     <link rel="alternate" hreflang="pt" href="https://novasqc.github.io/novasqc-inspection/pt/">
     <link rel="alternate" hreflang="sw" href="https://novasqc.github.io/novasqc-inspection/sw/">
@@ -21,7 +21,6 @@
     <link rel="alternate" hreflang="ha" href="https://novasqc.github.io/novasqc-inspection/ha/">
     <link rel="alternate" hreflang="am" href="https://novasqc.github.io/novasqc-inspection/am/">
     <link rel="alternate" hreflang="sn" href="https://novasqc.github.io/novasqc-inspection/sn/">
-    <link rel="alternate" hreflang="zh" href="https://novasqc.github.io/novasqc-inspection/zh/">
     <link rel="alternate" hreflang="zu" href="https://novasqc.github.io/novasqc-inspection/zu/">
     <link rel="alternate" hreflang="x-default" href="https://novasqc.github.io/novasqc-inspection/">
 
@@ -45,7 +44,6 @@
         "name": "NovaSQC Inspection Services",
         "description": "Professional third-party inspection services across Africa and Middle East. Product inspections, factory audits, loading supervision.",
         "url": "https://novasqc.github.io/novasqc-inspection/",
-        "telephone": "+86-755-00000000",
         "email": "info@novasqc.com",
         "areaServed": ["Africa", "Middle East", "Nigeria", "Egypt", "Kenya", "Saudi Arabia", "UAE", "South Africa", "Tanzania", "Ghana", "Qatar", "Mozambique", "Angola"]
     }
@@ -98,7 +96,6 @@
         .nav-cta:hover { background: var(--accent-light); transform: translateY(-2px); }
         .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
 
-        /* Hero */
         .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; }
         .hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: 100px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 20px; }
@@ -126,8 +123,16 @@
         .section-subtitle { text-align: center; color: var(--text-secondary); max-width: 640px; margin: 0 auto 60px; font-size: 1.05rem; }
         .section-divider { width: 60px; height: 4px; background: var(--accent); margin: 0 auto 20px; border-radius: 2px; }
 
-        /* About */
         .about-section { background: var(--bg-secondary); }
+
+        /* Professional Staff Section */
+        .pro-staff { padding: 80px 0; background: var(--bg-secondary); }
+        .pro-staff-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 40px; }
+        .pro-staff-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+        .pro-staff-item .icon { width: 48px; height: 48px; background: var(--bg-glass); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .pro-staff-item h4 { font-size: 0.9rem; margin-bottom: 4px; }
+        .pro-staff-item p { font-size: 0.8rem; color: var(--text-muted); }
+
         .about-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; margin-top: 60px; }
         .about-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; text-align: center; transition: all 0.3s; }
         .about-card:hover { border-color: var(--accent); transform: translateY(-4px); }
@@ -141,26 +146,44 @@
         .vm-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
 
         /* Why Us */
-        .comparison-wrapper { margin-top: 60px; }
-        .comparison-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
-        .comparison-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
-        .comparison-card.bad { border-color: rgba(239,68,68,0.3); }
-        .comparison-card.good { border-color: rgba(16,185,129,0.3); }
-        .comparison-card.best { border-color: var(--accent); box-shadow: 0 0 60px var(--accent-glow); }
-        .comparison-card h3 { font-size: 1.1rem; margin-bottom: 16px; text-align: center; }
-        .comparison-card.bad h3 { color: #ef4444; }
-        .comparison-card.good h3 { color: var(--success); }
-        .comparison-card.best h3 { color: var(--accent); }
-        .comparison-card .price-tag { text-align: center; font-size: 2rem; font-weight: 800; font-family: var(--font-mono); margin: 16px 0; }
-        .comparison-card.bad .price-tag { color: #ef4444; }
-        .comparison-card.good .price-tag { color: var(--success); }
-        .comparison-card.best .price-tag { color: var(--accent); }
-        .comparison-card ul { list-style: none; }
-        .comparison-card li { padding: 8px 0; color: var(--text-secondary); font-size: 0.875rem; border-bottom: 1px solid var(--border); }
-        .comparison-card li:last-child { border-bottom: none; }
-        .comparison-card.bad li::before { content: '✗ '; color: #ef4444; }
-        .comparison-card.good li::before { content: '− '; color: var(--warning); }
-        .comparison-card.best li::before { content: '✓ '; color: var(--success); }
+        .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 60px; }
+        .why-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: all 0.3s; }
+        .why-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .why-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--accent); }
+        .why-card p { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6; }
+
+        /* Pricing */
+        .pricing-breakdown-intro { text-align: center; color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .price-break-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; align-items: start; }
+        .pb-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+        .pb-card.bad { border-color: rgba(239,68,68,0.3); }
+        .pb-card.good { border-color: rgba(16,185,129,0.3); }
+        .pb-card.best { border-color: var(--accent); box-shadow: 0 0 60px var(--accent-glow); }
+        .pb-card h3 { font-size: 1.1rem; margin-bottom: 16px; text-align: center; }
+        .pb-card.bad h3 { color: #ef4444; }
+        .pb-card.good h3 { color: var(--success); }
+        .pb-card.best h3 { color: var(--accent); }
+        .pb-card .price-tag { text-align: center; font-size: 2.2rem; font-weight: 800; font-family: var(--font-mono); margin: 16px 0; }
+        .pb-card.bad .price-tag { color: #ef4444; }
+        .pb-card.good .price-tag { color: var(--success); }
+        .pb-card.best .price-tag { color: var(--accent); font-size: 2.5rem; }
+        .pb-card .price-tag span { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
+        .price-costs { margin: 16px 0; }
+        .cost-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 0.8rem; color: var(--text-muted); }
+        .pb-card ul { list-style: none; margin-top: 16px; }
+        .pb-card li { padding: 6px 0; color: var(--text-secondary); font-size: 0.8rem; border-bottom: 1px solid var(--border); }
+        .pb-card li:last-child { border-bottom: none; }
+        .pb-card.bad li::before { content: '✗ '; color: #ef4444; }
+        .pb-card.good li::before { content: '− '; color: var(--warning); }
+        .pb-card.best li::before { content: '✓ '; color: var(--success); }
+
+        .service-pod-callout { background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card)); border: 2px solid var(--accent); border-radius: var(--radius); padding: 40px; margin-top: 40px; text-align: center; }
+        .service-pod-callout h3 { font-size: 1.5rem; color: var(--accent); margin-bottom: 12px; }
+        .service-pod-callout p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; }
+        .service-pod-callout .pod-price { font-size: 2.5rem; font-weight: 800; color: var(--accent); font-family: var(--font-mono); }
+        .service-pod-callout .pod-price span { font-size: 1rem; color: var(--text-muted); }
+        .service-pod-callout ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 20px; }
+        .service-pod-callout li { background: var(--bg-glass); padding: 8px 16px; border-radius: 100px; font-size: 0.8rem; color: var(--text-secondary); }
 
         /* Services */
         .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
@@ -173,6 +196,14 @@
         .service-card li:last-child { border-bottom: none; }
         .service-card li::before { content: '✓ '; color: var(--success); }
 
+        /* Product Categories */
+        .cat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; margin-top: 60px; }
+        .cat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+        .cat-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--accent); }
+        .cat-card p { color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 16px; }
+        .cat-card ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+        .cat-card li { background: var(--bg-glass); padding: 4px 10px; border-radius: 100px; font-size: 0.75rem; color: var(--text-muted); }
+
         /* Coverage */
         .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 24px; }
         .coverage-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: all 0.3s; }
@@ -182,26 +213,28 @@
         .coverage-card .countries { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
         .coverage-card .countries span { background: var(--bg-glass); padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; color: var(--text-muted); }
 
-        /* Pricing */
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 24px; }
-        .pricing-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px 32px; text-align: center; transition: all 0.3s; }
-        .pricing-card.featured { border-color: var(--accent); box-shadow: 0 0 60px var(--accent-glow); position: relative; }
-        .pricing-card.featured::before { content: 'Most Popular'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; padding: 4px 16px; border-radius: 100px; font-size: 0.75rem; font-weight: 600; }
-        .pricing-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
-        .pricing-card .price { font-size: 2.5rem; font-weight: 800; color: var(--accent); font-family: var(--font-mono); margin: 20px 0; }
-        .pricing-card .price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
-        .pricing-card ul { list-style: none; text-align: left; margin: 24px 0; }
-        .pricing-card li { padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; border-bottom: 1px solid var(--border); }
-        .pricing-card li::before { content: '✓ '; color: var(--success); font-weight: 600; }
-        .pricing-note { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 24px; }
-
-        /* Como Funciona */
-        .steps-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 16px; position: relative; }
-        .steps-grid::before { content: ''; position: absolute; top: 36px; left: 8%; right: 8%; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+        /* How It Works */
+        .steps-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; position: relative; }
+        .steps-grid::before { content: ''; position: absolute; top: 36px; left: 12%; right: 12%; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
         .step { text-align: center; position: relative; z-index: 1; }
         .step-num { width: 72px; height: 72px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 16px; box-shadow: 0 0 40px var(--accent-glow); }
         .step h4 { font-size: 0.85rem; margin-bottom: 6px; }
         .step p { color: var(--text-secondary); font-size: 0.75rem; }
+
+        /* Factory Audit Detail */
+        .audit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 60px; }
+        .audit-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; }
+        .audit-card h3 { font-size: 1.2rem; margin-bottom: 20px; color: var(--accent); }
+        .audit-card ul { list-style: none; }
+        .audit-card li { padding: 8px 0; color: var(--text-secondary); font-size: 0.875rem; border-bottom: 1px solid var(--border); }
+        .audit-card li:last-child { border-bottom: none; }
+        .audit-card li::before { content: '✓ '; color: var(--success); }
+
+        .sustainable-results { margin-top: 60px; }
+        .sr-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 24px; }
+        .sr-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+        .sr-card h4 { font-size: 0.95rem; margin-bottom: 8px; color: var(--text-primary); }
+        .sr-card p { font-size: 0.825rem; color: var(--text-muted); }
 
         /* Testimonials */
         .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 24px; margin-top: 60px; }
@@ -218,12 +251,21 @@
         .faq-item[open] summary::after { content: '−'; }
         .faq-item .answer { padding: 0 24px 20px; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; }
 
+        /* Blog Preview */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 24px; margin-top: 60px; }
+        .blog-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: all 0.3s; }
+        .blog-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .blog-card .date { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; }
+        .blog-card h3 { font-size: 0.95rem; margin-bottom: 8px; line-height: 1.4; }
+        .blog-card p { font-size: 0.825rem; color: var(--text-muted); }
+        .blog-card .tag { display: inline-block; background: var(--bg-glass); color: var(--accent); font-size: 0.7rem; padding: 2px 8px; border-radius: 100px; margin-top: 8px; }
+
         /* Contact */
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; }
         .contact-info h3 { font-size: 1.3rem; margin-bottom: 20px; }
-        .contact-info p { color: var(--text-secondary); margin-bottom: 24px; }
-        .contact-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
-        .contact-item .icon { width: 40px; height: 40px; background: var(--bg-glass); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .contact-info > p { color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem; }
+        .contact-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+        .contact-item .icon { width: 40px; height: 40px; background: var(--bg-glass); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.1rem; }
         .contact-item strong { display: block; font-size: 0.875rem; margin-bottom: 2px; }
         .contact-item span, .contact-item a { color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; }
         .contact-item a:hover { color: var(--accent); }
@@ -246,10 +288,20 @@
         .footer-col a:hover { color: var(--accent); }
         .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem; }
 
+        .social-links { display: flex; gap: 12px; margin-top: 16px; }
+        .social-links a { width: 36px; height: 36px; background: var(--bg-glass); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; transition: all 0.2s; }
+        .social-links a:hover { background: var(--accent); color: #fff; }
+
         @media(max-width: 1024px) {
-            .comparison-grid { grid-template-columns: 1fr; }
+            .price-break-grid { grid-template-columns: 1fr; }
             .about-grid { grid-template-columns: repeat(2,1fr); }
             .services-grid { grid-template-columns: 1fr; }
+            .audit-grid { grid-template-columns: 1fr; }
+            .cat-grid { grid-template-columns: 1fr; }
+            .pro-staff-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr 1fr; }
+            .steps-grid { grid-template-columns: repeat(2,1fr); }
+            .steps-grid::before { display: none; }
         }
         @media(max-width: 768px) {
             .hero .container { grid-template-columns: 1fr; text-align: center; }
@@ -260,8 +312,8 @@
             .about-grid { grid-template-columns: 1fr; }
             .vm-grid { grid-template-columns: 1fr; }
             .contact-wrapper { grid-template-columns: 1fr; }
-            .steps-grid { grid-template-columns: repeat(3,1fr); gap: 24px; }
-            .steps-grid::before { display: none; }
+            .why-grid { grid-template-columns: 1fr; }
+            .sr-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
             .nav-links { display: none; }
             .mobile-menu-btn { display: block; }
@@ -270,7 +322,6 @@
         }
         @media(max-width: 480px) {
             .footer-grid { grid-template-columns: 1fr; }
-            .steps-grid { grid-template-columns: repeat(2,1fr); }
         }
     </style>
 </head>
@@ -281,9 +332,9 @@
 
     <div class="lang-bar">
         <div class="container">
-            <a href="../">EN</a>
-            <a href="./">中文</a>
-            <a href="./pt/">PT</a>
+            <a href="../" class="active">EN</a>
+            <a href="../zh/">中文</a>
+            <a href="./" class="active">FR</a>
             <a href="../pt/">PT</a>
             <a href="../sw/">SW</a>
             <a href="../ar/">AR</a>
@@ -296,13 +347,14 @@
 
     <nav>
         <div class="container">
-            <a href="#" class="logo"><img src="180x60-蓝.png" alt="NovaSQC"></a>
+            <a href="#" class="logo"><img src="../180x60-蓝.png" alt="NovaSQC"></a>
             <ul class="nav-links">
-                <li><a href="#about">Sobre Nós</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#pricing">Preços</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact" class="nav-cta">Orçamento</a></li>
+                <li><a href="#contact" class="nav-cta">Get Quote</a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
         </div>
@@ -312,64 +364,122 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge"><span class="dot"></span> 10+ Anos · 500+ Projetos · Inspetores Certificados</div>
-                <h1>As Melhores Marcas Têm uma Equipe de Controle de Qualidade no Local em <span>Africa & Middle East</span></h1>
-                <p>Ao fornecer ou operar projetos na África e no Oriente Médio, you need a team you can trust. NovaSQC provides professional third-party inspection, factory audit, and loading supervision services — with certified inspectors who speak your language and know your region.</p>
+                <div class="hero-badge"><span class="dot"></span> 10+ Years · 500+ Projects · Certified Inspectors</div>
+                <h1>The Best Brands Have a Quality Control Team on the Ground in <span>Africa & Middle East</span></h1>
+                <p>If you're looking for a quality control partner in Africa and Middle East, you've come to the right place. NovaSQC provides professional third-party inspection, factory audit, and loading supervision services — with certified inspectors who speak your language and know your region.</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Reservar Agora</a>
-                    <a href="#services" class="btn btn-secondary">Nossos Serviços</a>
+                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
                 </div>
                 <div class="stats">
                     <div class="stat"><div class="stat-value">10+</div><div class="stat-label">Years Experience</div></div>
-                    <div class="stat"><div class="stat-value">500+</div><div class="stat-label">Projetos Concluídos</div></div>
-                    <div class="stat"><div class="stat-value">25+</div><div class="stat-label">Países</div></div>
-                    <div class="stat"><div class="stat-value">2k+</div><div class="stat-label">Avaliações</div></div>
+                    <div class="stat"><div class="stat-value">500+</div><div class="stat-label">Projects Done</div></div>
+                    <div class="stat"><div class="stat-value">25+</div><div class="stat-label">Countries</div></div>
+                    <div class="stat"><div class="stat-value">2k+</div><div class="stat-label">Reviews</div></div>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="800x800-蓝.png" alt="NovaSQC">
+                <img src="../800x800-蓝.png" alt="NovaSQC">
             </div>
         </div>
     </section>
 
-    <!-- About -->
+    <!-- Professional Staffs -->
+    <section class="pro-staff">
+        <div class="container">
+            <h2 class="section-title">Professional Inspectors</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Every inspector on our team meets the highest professional standards.</p>
+
+            <div class="pro-staff-grid">
+                <div class="pro-staff-item">
+                    <div class="icon">🏅</div>
+                    <div>
+                        <h4>Certified Inspectors</h4>
+                        <p>API 1169, CWI, NACE certified. Qualified by internationally recognized bodies with at least 4+ years of field experience.</p>
+                    </div>
+                </div>
+                <div class="pro-staff-item">
+                    <div class="icon">⚡</div>
+                    <div>
+                        <h4>Start Within 48 Hours</h4>
+                        <p>Inspection and audit bookings can typically begin within 48 hours of your request — no long waiting periods.</p>
+                    </div>
+                </div>
+                <div class="pro-staff-item">
+                    <div class="icon">📋</div>
+                    <div>
+                        <h4>Reports Within 12 Hours</h4>
+                        <p>Receive your illustrated inspection report with detailed findings and photos within 12 hours of the on-site visit.</p>
+                    </div>
+                </div>
+                <div class="pro-staff-item">
+                    <div class="icon">💯</div>
+                    <div>
+                        <h4>Not Happy, Fully Refund</h4>
+                        <p>If you're not satisfied with the inspection quality, we'll re-inspect at no additional cost or provide a full refund.</p>
+                    </div>
+                </div>
+                <div class="pro-staff-item">
+                    <div class="icon">📅</div>
+                    <div>
+                        <h4>Free Cancellation</h4>
+                        <p>Cancel or reschedule your inspection up to 4pm local time the day before the scheduled date at no charge.</p>
+                    </div>
+                </div>
+                <div class="pro-staff-item">
+                    <div class="icon">🌍</div>
+                    <div>
+                        <h4>Africa & Middle East Coverage</h4>
+                        <p>Dedicated inspectors present in 25+ countries across Africa and Middle East to serve you efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Who We Are -->
     <section class="about-section" id="about">
         <div class="container">
-            <h2 class="section-title">Sobre a NovaSQC</h2>
+            <h2 class="section-title">Your Inspectors in Africa & Middle East</h2>
             <div class="section-divider"></div>
-            <p class="section-subtitle">NovaSQC is a full-service, full-line third-party inspection agency operating across Africa and Middle East.</p>
+            <p class="section-subtitle">NovaSQC is your best choice for third-party inspection services in Africa and Middle East.</p>
+
+            <p style="text-align:center; color:var(--text-secondary); max-width:800px; margin:0 auto 60px; font-size:1rem; line-height:1.8;">
+                When sourcing or operating projects across Africa and Middle East, most buyers face a variety of risks ranging from quality issues and quantity discrepancies to concerns about supplier compliance. To make your projects safer and easier, NovaSQC strives to offer the most reliable and cost-effective quality control solutions to companies of all sizes.
+            </p>
 
             <div class="about-grid">
                 <div class="about-card">
                     <div class="about-icon">👷</div>
                     <h3>Who We Are</h3>
-                    <p>With 10+ anos de experiência e inspetores certificados across Africa and Middle East, NovaSQC has served 500+ clients. We are our customers' eyes and hands on the ground — providing first-hand, validated reports you can trust.</p>
+                    <p>With 10+ years of experience and certified inspectors across Africa and Middle East, NovaSQC has served 500+ clients from Americas, Europe, Oceania, Asia and Africa.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">🔍</div>
                     <h3>What We Inspect</h3>
-                    <p>We provide independent inspection services from pre-shipment to loading. Our services cover product inspections, factory audits, and loading supervision — performed by qualified and experienced inspectors who give you a clear picture of what's really happening.</p>
+                    <p>We provide independent inspection services from pre-shipment to loading. Our services cover product inspections, factory audits, and loading supervision.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">⭐</div>
                     <h3>Why NovaSQC</h3>
-                    <p>We go beyond basic inspections. Our inspectors deliver detailed, photo-documented reports within 12 hours. No cookie-cutter approach — every project gets personalized attention. Not happy? Full refund. It's that simple.</p>
+                    <p>We go beyond basic inspections. Our inspectors deliver detailed, photo-documented reports within 12 hours. Not happy? Full refund. It's that simple.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">⚙️</div>
-                    <h3>Como Funciona</h3>
-                    <p>Simple 6-step process: Send order details → Approve quote → We coordinate with supplier → Inspector visits site → Report issued → You decide next steps. Start within 48 hours of request.</p>
+                    <h3>How It Works</h3>
+                    <p>Simple 4-step process: Fill in the booking form → We confirm with supplier → We perform inspection → You receive report within 12 hours.</p>
                 </div>
             </div>
 
             <div class="vm-grid">
                 <div class="vm-card">
-                    <h3>🎯 Nossa Visão</h3>
-                    <p>To be the premier and preferred provider of third-party quality control and inspection services na África e no Oriente Médio, reconhecida pela excelência técnica, unwavering commitment to quality, and trusted by clients across the region.</p>
+                    <h3>🎯 Our Vision</h3>
+                    <p>To be the premier and preferred provider of third-party quality control and inspection services in Africa and Middle East, recognized for technical excellence, unwavering commitment to quality, and trusted by clients across the region.</p>
                 </div>
                 <div class="vm-card">
-                    <h3>📜 Nossa Missão</h3>
-                    <p>Nos esforçamos para usar nossa experiência and experience to be our customers' eyes and hands na África e no Oriente Médio — helping them succeed by garantindo qualidade, segurança e conformidade em cada etapa de seus projetos e cadeias de suprimentos.</p>
+                    <h3>📜 Our Mission</h3>
+                    <p>We endeavor to use our expertise and experience to be our customers' eyes and hands in Africa and Middle East — helping them succeed by ensuring quality, safety, and compliance at every stage of their projects and supply chains.</p>
                 </div>
             </div>
         </div>
@@ -378,54 +488,34 @@
     <!-- Why Us -->
     <section id="why">
         <div class="container">
-            <h2 class="section-title">Por Que Escolher a NovaSQC?</h2>
+            <h2 class="section-title">Why Choose NovaSQC?</h2>
             <div class="section-divider"></div>
-            <p class="section-subtitle">You can search online for an inspection company in Africa or Middle East and find 1,000s of competitors. At NovaSQC, we do a lot more than just inspections.</p>
+            <p class="section-subtitle">Since our inception, assisting clients with quality control for projects across Africa and Middle East has been our sole focus.</p>
 
-            <div class="comparison-wrapper">
-                <div class="comparison-grid">
-                    <div class="comparison-card bad">
-                        <h3>Fornecedores de Baixo Custo</h3>
-                        <div class="price-tag">$250–350/Day</div>
-                        <ul>
-                            <li>Untrained inspectors with minimal certification</li>
-                            <li>Bad reports, no photo evidence</li>
-                            <li>Unreliable & inconsistent results</li>
-                            <li>High risk of fraud or collusion</li>
-                            <li>Bad English & miscommunication</li>
-                            <li>Impossible inspector time quotas</li>
-                            <li>No 1-on-1 personalization</li>
-                            <li>Hidden costs and surprise fees</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-card good">
-                        <h3>Média do Setor</h3>
-                        <div class="price-tag">$600–900/Day</div>
-                        <ul>
-                            <li>Trained inspectors, basic certification</li>
-                            <li>Standard reports with limited photos</li>
-                            <li>Consistent but basic service</li>
-                            <li>No dedicated team for your project</li>
-                            <li>English spoken, limited local languages</li>
-                            <li>Standard turnaround time</li>
-                            <li>Reactive support only</li>
-                            <li>Limited Africa & Middle East coverage</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-card best">
-                        <h3>NovaSQC Service Pod</h3>
-                        <div class="price-tag">From $500/Day</div>
-                        <ul>
-                            <li>Inspetores certificados (API, CWI, NACE, ISO)</li>
-                            <li>Video & photo reports with full documentation</li>
-                            <li>100% satisfaction, full refund if not happy</li>
-                            <li>Your own dedicated service team</li>
-                            <li>Inglês, Francês, Árabe, Português, Swahili e mais</li>
-                            <li>Report delivered within 12 hours</li>
-                            <li>Proactive recommendations for improvement</li>
-                            <li>Full Africa & Middle East coverage</li>
-                        </ul>
-                    </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>💰 Cost-Effectiveness</h3>
+                    <p>We are confident that few companies can offer the same level of quality control solutions at our rates. Our Service Pod model delivers an entire QC team for the price of a single inspection — starting from just $7,900/month.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🎯 Solid Experience & Focused Expertise</h3>
+                    <p>With 10+ years of experience, we have always focused our business on industrial and infrastructure projects. We do what we are good at — and we do it across Africa and Middle East.</p>
+                </div>
+                <div class="why-card">
+                    <h3>⚡ Fast Response & Service</h3>
+                    <p>Questions and inquiries responded by our experts within 24 hours. Reports delivered within 12 hours of inspection completion. Draft reports available same day upon request.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🔄 Flexibility</h3>
+                    <p>We try every possible way to meet your special needs — including services without advance notice, cancellation up to 4pm the day before at no cost, special report formats, and customized programs.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🌍 National & Regional Coverage</h3>
+                    <p>Dedicated certified inspectors present in 25+ countries across Africa and Middle East — from East Africa to the Gulf states — to serve you efficiently wherever your projects are.</p>
+                </div>
+                <div class="why-card">
+                    <h3>✅ Traceability and Credibility</h3>
+                    <p>10+ years of proven records and 500+ happy customers. Our inspectors hold internationally recognized certifications including API 1169, CWI, NACE, and ISO 9001.</p>
                 </div>
             </div>
         </div>
@@ -434,44 +524,239 @@
     <!-- Services -->
     <section id="services">
         <div class="container">
-            <h2 class="section-title">Nossos Serviços</h2>
+            <h2 class="section-title">Our Services</h2>
             <div class="section-divider"></div>
-            <p class="section-subtitle">NovaSQC provides a wide range of independent inspection services across Africa and Middle East.</p>
+            <p class="section-subtitle">NovaSQC provides a wide range of independent inspection services from the start of production to container loading.</p>
 
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>🔍 Inspeções de Produtos</h3>
-                    <p class="service-desc">Serviços de inspeção independentes do pré-embarque ao carregamento. Performed by qualified inspectors, giving you a clear picture of production quality.</p>
+                    <h3>🔍 Product Inspections</h3>
+                    <p class="service-desc">NovaSQC provides a wide range of independent inspection services from the start of production to container loading. Performed by qualified and experienced inspectors, it will present customers a clear picture of how production really looks.</p>
                     <ul>
-                        <li>Inspeção do Primeiro Artigo (Pre-production)</li>
-                        <li>Inspeção em Linha (During Production)</li>
-                        <li>Inspeção Final por Amostragem</li>
-                        <li>Triagem de Defeitos & Removal</li>
-                        <li>Monitoramento da Produção</li>
+                        <li>First Article Inspection (Pre-production)</li>
+                        <li>In-line Inspection (During Production)</li>
+                        <li>Final Random Inspection</li>
+                        <li>Defect Sorting & Removal</li>
+                        <li>Production Monitoring</li>
                     </ul>
                 </div>
                 <div class="service-card">
-                    <h3>📋 Auditorias de Fábrica</h3>
-                    <p class="service-desc">Um bom parceiro facilita o seu negócio. Get validated first-hand reports on supplier capability and compliance before you commit.</p>
+                    <h3>📋 Factory Audits</h3>
+                    <p class="service-desc">A right and responsible partner for your production can really make a difference. Get validated first-hand reports on supplier capability and compliance before you commit.</p>
                     <ul>
-                        <li>Auditoria Simples de Fábrica (profile, capacity, photos)</li>
-                        <li>Auditoria Completa de Fábrica (quality, social, safety)</li>
-                        <li>Supplier capability assessment</li>
-                        <li>Quality management system review</li>
-                        <li>Social & ethical compliance audit</li>
+                        <li>Simple Factory Audit (profile, capacity, photos)</li>
+                        <li>Extensive Factory Audit (quality, social, safety)</li>
+                        <li>Supplier Capability Assessment</li>
+                        <li>Quality Management System Review</li>
+                        <li>Social & Ethical Compliance Audit</li>
                     </ul>
                 </div>
                 <div class="service-card">
-                    <h3>🚢 Inspeção de Carregamento</h3>
-                    <p class="service-desc">Supervisão de Carregamento de Contentores garantindo que seus produtos são manuseados corretamente and arrive at destination in satisfactory condition.</p>
+                    <h3>🚢 Loading Inspection</h3>
+                    <p class="service-desc">Container Loading Supervision provides reassurance that your finished goods are handled correctly when loaded into containers to ensure safe transportation and delivery to their final destination in a satisfactory condition.</p>
                     <ul>
-                        <li>Verificação das condições do contentor</li>
-                        <li>Verificação de Quantidade</li>
-                        <li>Product specifications review</li>
-                        <li>Marcas de expedição, embalagem e rotulagem</li>
-                        <li>Supervisão do carregamento e documentação</li>
+                        <li>Container Conditions</li>
+                        <li>Product Specifications</li>
+                        <li>Shipping Marks, Packaging & Labelling</li>
+                        <li>Loading Supervision</li>
+                        <li>Documentation & Quantity Loaded</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section id="categories" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title">Industries We Serve</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">NovaSQC has specific expertise in the inspection of products and auditing of suppliers across a large number of different industries.</p>
+
+            <div class="cat-grid">
+                <div class="cat-card">
+                    <h3>🏗️ Hard Goods & Industrial</h3>
+                    <p>Durable goods and industrial equipment with useful life greater than 3 years.</p>
+                    <ul>
+                        <li>Pipes, Valves & Fittings</li>
+                        <li>Steel & Metal Structures</li>
+                        <li>Industrial Machinery</li>
+                        <li>Construction Materials</li>
+                        <li>Tools & Equipment</li>
+                        <li>Oil & Gas Equipment</li>
+                    </ul>
+                </div>
+                <div class="cat-card">
+                    <h3>⚡ Electrical & Electronic</h3>
+                    <p>Electrical equipment and electronic components for industrial and consumer use.</p>
+                    <ul>
+                        <li>Electrical Tools & Motors</li>
+                        <li>Power Distribution Equipment</li>
+                        <li>Cables & Wiring</li>
+                        <li>Control Panels</li>
+                        <li>Lighting Equipment</li>
+                        <li>Electronic Accessories</li>
+                    </ul>
+                </div>
+                <div class="cat-card">
+                    <h3>🏭 Industrial & Mechanical</h3>
+                    <p>Items manufactured for use or consumption by other industries as opposed to direct retail consumers.</p>
+                    <ul>
+                        <li>Machinery Parts</li>
+                        <li>Metal Sheet & Fabrication</li>
+                        <li>Plastic Films & Polymers</li>
+                        <li>Packaging Materials</li>
+                        <li>Chemical Materials</li>
+                        <li>Safety Equipment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Factory Audit Detail -->
+    <section id="factory-audit">
+        <div class="container">
+            <h2 class="section-title">Factory Audit — Detailed Scope</h2>
+            <div class="section-divider"></div>
+
+            <div class="audit-grid">
+                <div class="audit-card">
+                    <h3>📋 Simple Factory Audit</h3>
+                    <ul>
+                        <li>Factory profile (company registration, business license)</li>
+                        <li>Detailed staff count and organization structure</li>
+                        <li>Products currently produced</li>
+                        <li>Observation of one production line (process steps, type and number of machines)</li>
+                        <li>Overview of general organization (quality system, working environment, equipment condition)</li>
+                        <li>Photos of factory building, production workshop, warehouse, office area</li>
+                        <li>Photos of business license, export license, and any certificates</li>
+                    </ul>
+                </div>
+                <div class="audit-card">
+                    <h3>📋 Extensive Factory Audit</h3>
+                    <ul>
+                        <li>Factory profile & detailed staff count</li>
+                        <li>Observation of one production line with capacity evaluation</li>
+                        <li>A brief audit of the quality management system</li>
+                        <li>A brief audit of social policy: child labour, forced labour, working hours (with random interviews)</li>
+                        <li>A brief audit of safety policy: fire prevention, evacuation plan, chemical hazards, protective equipment</li>
+                        <li>A quick assessment of environment policy: waste disposal, energy-efficient equipment</li>
+                        <li>Photos of factory, workshop, warehouse, office, licenses and certificates</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sustainable-results">
+                <h3 style="text-align:center; font-size:1.3rem; margin-bottom:8px;">🎯 Sustainable Results</h3>
+                <p style="text-align:center; color:var(--text-secondary); margin-bottom:24px;">Our audit services deliver long-term value for your supply chain.</p>
+                <div class="sr-grid">
+                    <div class="sr-card">
+                        <h4>Avoid Trade Scam or Fraud</h4>
+                        <p>Our audit services make sure you are dealing with a real and legitimate vendor to avoid the risk of trade scam or fraud.</p>
+                    </div>
+                    <div class="sr-card">
+                        <h4>Understand Your Supplier</h4>
+                        <p>Enable you to understand whether you are dealing with an agent or the manufacturer directly so as to avoid middleman commission.</p>
+                    </div>
+                    <div class="sr-card">
+                        <h4>Evaluate Supplier Capability</h4>
+                        <p>Evaluate your supplier comprehensively to ensure they are able to deliver your goods with expected quality on time.</p>
+                    </div>
+                    <div class="sr-card">
+                        <h4>Continuous Improvement</h4>
+                        <p>Provide more insights into your supplier's strengths and weaknesses and facilitate their continuous improvements.</p>
+                    </div>
+                    <div class="sr-card">
+                        <h4>Protect Corporate Image</h4>
+                        <p>Protect your corporate image by ensuring your supply chain is socially compliant and worthy of your trust.</p>
+                    </div>
+                    <div class="sr-card">
+                        <h4>Prepare for Brand Approval</h4>
+                        <p>Assist and prepare your suppliers for getting approval from major brands and retailers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title">Price of Africa & Middle East Quality Control Services</h2>
+            <div class="section-divider"></div>
+
+            <p class="pricing-breakdown-intro">You can go online and search for an inspection company in Africa or Middle East and get 1,000s of competitors. But at NovaSQC, we do a lot more than just inspections.</p>
+
+            <div class="price-break-grid">
+                <div class="pb-card bad">
+                    <h3>Low-Cost Providers, Freight Companies & Sourcing Agents</h3>
+                    <div class="price-costs">
+                        <div class="cost-row"><span>Labor</span><span>Minimal</span></div>
+                        <div class="cost-row"><span>Admin</span><span>None</span></div>
+                        <div class="cost-row"><span>Margin</span><span>High</span></div>
+                    </div>
+                    <div class="price-tag">$250–350<span>/Day</span></div>
+                    <ul>
+                        <li>Impossible Inspector Time Quotas</li>
+                        <li>Bad Reports, No 1-on-1 Personalization</li>
+                        <li>Unreliable & Inconsistent Results</li>
+                        <li>Untrained Inspectors</li>
+                        <li>Bad English & Miscommunication</li>
+                        <li>High Risk of Fraud</li>
+                    </ul>
+                </div>
+
+                <div class="pb-card good">
+                    <h3>Industry Average</h3>
+                    <div class="price-costs">
+                        <div class="cost-row"><span>Inspector Time & Travel Costs</span><span>~60%</span></div>
+                        <div class="cost-row"><span>Training & Auditing</span><span>~10%</span></div>
+                        <div class="cost-row"><span>Margin</span><span>~30%</span></div>
+                    </div>
+                    <div class="price-tag">$600–900<span>/Day</span></div>
+                    <ul>
+                        <li>Trained Inspectors</li>
+                        <li>No 1-on-1 Personalization or Assigned Team</li>
+                        <li>Unreliable & Inconsistent Results</li>
+                        <li>Bad English & Miscommunication</li>
+                        <li>Not Up to Industry Standards</li>
+                        <li>Limited Coverage in Africa & Middle East</li>
+                    </ul>
+                </div>
+
+                <div class="pb-card best">
+                    <h3>NovaSQC — Service Pod</h3>
+                    <div class="price-costs">
+                        <div class="cost-row"><span>Trained, Bilingual Inspector Time & Travel</span><span>~50%</span></div>
+                        <div class="cost-row"><span>Training, Auditing & Management</span><span>~25%</span></div>
+                        <div class="cost-row"><span>NovaSQC Margin</span><span>~25%</span></div>
+                    </div>
+                    <div class="price-tag">$7,900+<span>/Month</span></div>
+                    <ul>
+                        <li>Native English Service Pod (Your Own Team)</li>
+                        <li>Video & Photo Reports with Factory Overview</li>
+                        <li>Pay Only For Actual Inspector Time</li>
+                        <li>Custom Instructions for Unique Products</li>
+                        <li>Continuously Improving Recommendations</li>
+                        <li>Full Africa & Middle East Coverage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-pod-callout">
+                <h3>Get an Entire Quality Control Team for the Price of an Inspection!</h3>
+                <p>Our Service Pod model gives you dedicated support — without the overhead of hiring full-time staff.</p>
+                <div class="pod-price">From $7,900<span>/Month</span></div>
+                <ul>
+                    <li>✓ Dedicated Service Pod</li>
+                    <li>✓ Video & Photo Inspection Reports</li>
+                    <li>✓ Factory Overview Documentation</li>
+                    <li>✓ Custom Product Instructions</li>
+                    <li>✓ Continuous Improvement Recommendations</li>
+                    <li>✓ Full Africa & Middle East Coverage</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary" style="margin-top:20px">Start Your Service Pod</a>
             </div>
         </div>
     </section>
@@ -487,27 +772,27 @@
                 <div class="coverage-card">
                     <h3>🌍 East Africa</h3>
                     <p>Growing industrial base and increasing trade across East Africa with major infrastructure development.</p>
-                    <div class="countries"><span>Quênia</span><span>Tanzânia</span><span>Uganda</span><span>Etiópia</span><span>Rwanda</span></div>
+                    <div class="countries"><span>Kenya</span><span>Tanzania</span><span>Uganda</span><span>Ethiopia</span><span>Rwanda</span></div>
                 </div>
                 <div class="coverage-card">
                     <h3>🌍 West Africa</h3>
                     <p>Mature commercial hubs with extensive trade networks, particularly in Nigeria and Ghana.</p>
-                    <div class="countries"><span>Nigéria</span><span>Ghana</span><span>Ivory Coast</span><span>Senegal</span><span>Camarões</span></div>
+                    <div class="countries"><span>Nigeria</span><span>Ghana</span><span>Ivory Coast</span><span>Senegal</span><span>Cameroon</span></div>
                 </div>
                 <div class="coverage-card">
                     <h3>🌍 North Africa</h3>
                     <p>Established trade corridors connecting Africa to Europe and the Middle East.</p>
-                    <div class="countries"><span>Egito</span><span>Algeria</span><span>Morocco</span><span>Libya</span><span>Tunisia</span></div>
+                    <div class="countries"><span>Egypt</span><span>Algeria</span><span>Morocco</span><span>Libya</span><span>Tunisia</span></div>
                 </div>
                 <div class="coverage-card">
                     <h3>🌍 Middle East</h3>
                     <p>Major commercial hubs and growing industrial sectors across the Gulf region.</p>
-                    <div class="countries"><span>Arábia Saudita</span><span>EAU</span><span>Qatar</span><span>Kuwait</span><span>Oman</span><span>Iraq</span></div>
+                    <div class="countries"><span>Saudi Arabia</span><span>UAE</span><span>Qatar</span><span>Kuwait</span><span>Oman</span><span>Iraq</span></div>
                 </div>
                 <div class="coverage-card">
                     <h3>🌍 Southern Africa</h3>
                     <p>Emerging markets with growing manufacturing and mining sectors.</p>
-                    <div class="countries"><span>África do Sul</span><span>Moçambique</span><span>Zambia</span><span>Botswana</span><span>Namibia</span></div>
+                    <div class="countries"><span>South Africa</span><span>Mozambique</span><span>Zambia</span><span>Botswana</span><span>Namibia</span></div>
                 </div>
                 <div class="coverage-card">
                     <h3>🌍 Central Africa</h3>
@@ -518,104 +803,42 @@
         </div>
     </section>
 
-    <!-- Como Funciona -->
+    <!-- How It Works (4-step to match novasqc.com) -->
     <section id="how">
         <div class="container">
-            <h2 class="section-title">Como Funciona</h2>
+            <h2 class="section-title">How It Works</h2>
             <div class="section-divider"></div>
-            <p class="section-subtitle">A garantia de qualidade é um sistema complicado — but nós cuidamos de todos os detalhes para você. It's as simple as these six steps.</p>
+            <p class="section-subtitle">Quality assurance is a complicated system! But we will handle all the trivial for you. It really is as simple as these four steps.</p>
 
             <div class="steps-grid">
                 <div class="step">
                     <div class="step-num">1</div>
-                    <h4>Envie os Detalhes</h4>
-                    <p>Customer sends order details and requirements to NovaSQC</p>
+                    <h4>Book Inspection</h4>
+                    <p>Fill in our booking form. Tell us your project details, service type, and requirements.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">2</div>
-                    <h4>Aprovar Orçamento</h4>
-                    <p>Customer approves the costs offered by NovaSQC</p>
+                    <h4>We Confirm</h4>
+                    <p>We contact your supplier to confirm the inspection date and address.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">3</div>
-                    <h4>Nós Coordenamos</h4>
-                    <p>NovaSQC coordinates with supplier to make arrangements</p>
+                    <h4>On-Site Visit</h4>
+                    <p>Inspector performs the on-site inspection or audit as scheduled.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">4</div>
-                    <h4>Visita ao Local</h4>
-                    <p>Qualified inspector goes to the site for on-site inspection</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">5</div>
-                    <h4>Relatório Emitido</h4>
-                    <p>Illustrated report issued with detailed inspection findings</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">6</div>
-                    <h4>Você Decide</h4>
-                    <p>Customer makes decision: rework, re-inspection, shipment or rejection</p>
+                    <h4>Report Issued</h4>
+                    <p>You will receive the illustrated inspection report within 12 hours.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing">
-        <div class="container">
-            <h2 class="section-title">Preços</h2>
-            <div class="section-divider"></div>
-            <p class="section-subtitle">Transparent, all-inclusive pricing. No hidden fees. The price you see is the price you pay.</p>
-
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Product Inspection</h3>
-                    <div class="price">$500 <span>/ day</span></div>
-                    <ul>
-                        <li>Qualified certified inspector</li>
-                        <li>Full day on-site inspection</li>
-                        <li>Photo & video documentation</li>
-                        <li>Report delivered in 12 hours</li>
-                        <li>First Article / In-line / Final Random</li>
-                        <li>Defect sorting available</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary form-submit">Orçamento</a>
-                </div>
-                <div class="pricing-card featured">
-                    <h3>Factory Audit</h3>
-                    <div class="price">$700 <span>/ day</span></div>
-                    <ul>
-                        <li>Senior auditor deployment</li>
-                        <li>Full day comprehensive audit</li>
-                        <li>Detailed audit report with photos</li>
-                        <li>Quality & compliance assessment</li>
-                        <li>Simple or Extensive audit options</li>
-                        <li>Corrective action recommendations</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary form-submit">Orçamento</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>Inspeção de Carregamento</h3>
-                    <div class="price">$400 <span>/ day</span></div>
-                    <ul>
-                        <li>Loading supervisor on site</li>
-                        <li>Verificação das condições do contentor</li>
-                        <li>Verificação de Quantidade</li>
-                        <li>Packaging & labelling inspection</li>
-                        <li>Full documentation provided</li>
-                        <li>Prevents shipping errors</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary form-submit">Orçamento</a>
-                </div>
-            </div>
-            <p class="pricing-note">Todos os preços são incluídos. Sem custos ocultos. Covers inspector/auditor time, travel within site area, meals, and the inspection/audit report. Cancelamento gratuito até às 16h do dia anterior at no charge.</p>
         </div>
     </section>
 
     <!-- Testimonials -->
     <section id="testimonials">
         <div class="container">
-            <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+            <h2 class="section-title">What Our Clients Say</h2>
             <div class="section-divider"></div>
             <p class="section-subtitle">Based on 2k+ reviews from clients across Africa and Middle East.</p>
 
@@ -627,13 +850,13 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"After working with several inspection companies across Africa, I can tell you NovaSQC is tops in their field — a team you can trust!"</p>
+                    <p>"After working with several inspection companies across Africa and Middle East, I can tell you NovaSQC is tops in their field — a team you can trust!"</p>
                     <div class="author">— Centric Engineering</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
                     <p>"Your inspection report is concise, thorough and very organized. And thank you for the many detailed product photos. I take comfort in knowing you will be there."</p>
-                    <div class="author">— Major Trading Company</div>
+                    <div class="author">— Auto Zone Inc.</div>
                 </div>
             </div>
         </div>
@@ -642,39 +865,73 @@
     <!-- FAQ -->
     <section id="faq">
         <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
+            <h2 class="section-title">Frequently Asked Questions</h2>
             <div class="section-divider"></div>
             <p class="section-subtitle">If you can't find the answer you're looking for, please contact us directly.</p>
 
             <div class="faq-list">
                 <details class="faq-item">
-                    <summary>What is the procedure for working with NovaSQC?</summary>
-                    <div class="answer">There are 6 steps:<br><br>1. Customer sends order details and requirements to NovaSQC<br>2. Customer approves the costs offered by NovaSQC<br>3. NovaSQC coordinates with supplier to make arrangements<br>4. A qualified inspector goes to the site for on-site inspection<br>5. Illustrated report is issued with detailed inspection findings<br>6. Customer makes the decision on next steps: rework, re-inspection, shipment or rejection</div>
+                    <summary>What is the procedure of working with NovaSQC?</summary>
+                    <div class="answer">There are 4 steps to work with us:<br><br>1. Fill in our booking form here: <a href="#contact" style="color:var(--accent)">BOOK NOW</a><br>2. As per the booking form received, we contact your supplier to confirm the inspection date and address<br>3. Inspection fee collected, we perform the inspection as per the schedule<br>4. You will receive the inspection report within 12 hours after the inspection is finished</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Existem outras taxas além dos preços listados?</summary>
-                    <div class="answer">No. All the prices you see on our website are all-inclusive prices. There are no hidden costs. It covers all related costs such as inspector time, traveling within the site area, meals, and the inspection report.</div>
+                    <summary>Are there any other fees behind the listed prices?</summary>
+                    <div class="answer">No any other fees behind the prices! All the prices you see on our website are all-inclusive prices. No hidden cost. It covers all related cost such as traveling, meals and report etc.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Meu fornecedor recomendou sua própria empresa de inspeção. Should I use them?</summary>
-                    <div class="answer">Nós recomendamos fortemente contra isso. Inspection companies should be 3rd parties. Suppliers only recommend inspection companies they have relationships with — which means the inspector is likely to pass a bad order to maintain that relationship. NovaSQC works exclusively for you, the client.</div>
+                    <summary>My factory recommended an inspection company. Should I use them?</summary>
+                    <div class="answer">Inspection companies should be 3rd parties. Factories only recommend inspection companies they have relationships with, which means the inspector is likely to pass a bad order. NovaSQC works exclusively for you, the buyer.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Que certificações seus inspetores possuem?</summary>
-                    <div class="answer">Our inspectors hold internationally recognized qualifications. All inspectors have at least 4+ years of field experience. Certifications vary by region — contact us for details on specific inspector credentials in your area.</div>
+                    <summary>Why do the photos look different from what I sent?</summary>
+                    <div class="answer">When we take photos during a mid-production inspection or pre-shipment inspection, the goal is to ensure there are no discrepancies in size, material, coloring, shape, design, stitching, etc. Regarding shades of color, finishes, shine, and texture — these can be hard to capture via photos due to factory lighting, lack of sunlight, and camera angle. This is why we encourage clients to send in a product sample so our inspectors can physically compare it during the inspection.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Quais idiomas seus inspetores falam?</summary>
+                    <summary>What is a defect?</summary>
+                    <div class="answer">A product's nonfulfillment of an intended requirement or reasonable expectation for use, including safety considerations. There are four classes of defects:<br><br>• <strong>Class 1 (Very Serious):</strong> Leads directly to severe injury or catastrophic economic loss<br>• <strong>Class 2 (Serious):</strong> Leads directly to significant injury or significant economic loss<br>• <strong>Class 3 (Major):</strong> Related to major problems with respect to intended normal or reasonably foreseeable use<br>• <strong>Class 4 (Minor):</strong> Related to minor problems with respect to intended normal or reasonably foreseeable use</div>
+                </details>
+                <details class="faq-item">
+                    <summary>What certifications do your inspectors hold?</summary>
+                    <div class="answer">Our inspectors hold internationally recognized qualifications including API 1169, CWI, NACE, and ISO 9001. All inspectors have at least 4+ years of field experience. Certifications vary by region — contact us for details on specific inspector credentials in your area.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>What languages do your inspectors speak?</summary>
                     <div class="answer">Our inspectors speak English, French, Portuguese, Arabic, Swahili, Hausa, Amharic, Shona, Zulu, and more. We match inspectors to your project location to ensure clear communication with all stakeholders.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Posso cancelar ou reagendar an inspection?</summary>
+                    <summary>Can I cancel or reschedule an inspection?</summary>
                     <div class="answer">Yes. You can cancel or reschedule your inspection up to 4pm local time the day before the scheduled date at no charge. For urgent reschedules, contact us directly and we will do our best to accommodate your needs.</div>
                 </details>
-                <details class="faq-item">
-                    <summary>E se eu não estiver satisfeito with the inspection?</summary>
-                    <div class="answer">Não satisfeito, reembolso integral. If you're not satisfied with the inspection quality, we'll re-inspect at no additional cost or provide a full refund. Your satisfaction and the integrity of your project are our top priorities.</div>
-                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section id="blog" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title">News & Insights</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Stay updated with the latest in quality control, supply chain, and inspection industry news.</p>
+
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="date">2026-04-10</div>
+                    <h3>Quality Innovation in African Infrastructure Projects: NovaSQC's Precise Control of the Inspection Process</h3>
+                    <p>As infrastructure investment grows across Africa, quality control has become a critical factor in project success...</p>
+                    <span class="tag">Industry News</span>
+                </div>
+                <div class="blog-card">
+                    <div class="date">2026-03-22</div>
+                    <h3>Mitigating Trade Risks in Steel & Pipeline Purchases: Insights from NovaSQC Inspection Expertise</h3>
+                    <p>In an increasingly globalized market, the procurement of industrial materials presents unique challenges...</p>
+                    <span class="tag">Trade Insights</span>
+                </div>
+                <div class="blog-card">
+                    <div class="date">2026-02-18</div>
+                    <h3>Ensuring Safety and Quality in Oil & Gas Equipment: Expert Third-Party Inspection Strategies</h3>
+                    <p>In the dynamic and competitive world of energy infrastructure, ensuring that equipment meets stringent safety standards...</p>
+                    <span class="tag">Oil & Gas</span>
+                </div>
             </div>
         </div>
     </section>
@@ -682,30 +939,54 @@
     <!-- Contact -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Contate-Nos</h2>
+            <h2 class="section-title">Contact Us</h2>
             <div class="section-divider"></div>
-            <p class="section-subtitle">Pronto para começar? Contate-nos e responderemos em 24 horas.</p>
+            <p class="section-subtitle">Ready to start? Contact us and we'll respond within 24 hours.</p>
 
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h3>Entre em Contato</h3>
+                    <h3>Get In Touch</h3>
                     <p>Whether you need a single inspection or ongoing quality support across Africa and Middle East, our team is ready to help.</p>
 
                     <div class="contact-item">
                         <div class="icon">📧</div>
-                        <div><strong>E-mail</strong><a href="mailto:info@novasqc.com">info@novasqc.com</a></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">🌍</div>
-                        <div><strong>Website</strong><a href="https://novasqc.github.io/novasqc-inspection/">novasqc.github.io/novasqc-inspection</a></div>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:info@novasqc.com">info@novasqc.com</a>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <div class="icon">📍</div>
-                        <div><strong>Office</strong><span>Shenzhen, Guangdong, China<br>Serving Africa & Middle East</span></div>
+                        <div>
+                            <strong>Office</strong>
+                            <span>Shenzhen, Guangdong, China<br>Serving Africa & Middle East</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📱</div>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <a href="https://wa.me/8613061273656">+86 130 6127 3656</a>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <div class="icon">⏰</div>
-                        <div><strong>Response Time</strong><span>We reply to all inquiries within 24 hours</span></div>
+                        <div>
+                            <strong>Open Hours</strong>
+                            <span>Monday – Saturday: 8am – 6pm<br>Sunday: 11am – 4pm</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">🌍</div>
+                        <div>
+                            <strong>Website</strong>
+                            <a href="https://novasqc.github.io/novasqc-inspection/">novasqc.github.io/novasqc-inspection</a>
+                        </div>
+                    </div>
+                    <div class="social-links" style="margin-top:16px;">
+                        <a href="#" title="Facebook">FB</a>
+                        <a href="#" title="Twitter">X</a>
+                        <a href="#" title="LinkedIn">IN</a>
                     </div>
                 </div>
 
@@ -715,33 +996,34 @@
                         <div class="form-group"><label>Company</label><input type="text" id="company" placeholder="Company name"></div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group"><label>E-mail *</label><input type="email" id="email" placeholder="your@email.com" required></div>
-                        <div class="form-group"><label>Telefone</label><input type="tel" id="phone" placeholder="+1 234 567 8900"></div>
+                        <div class="form-group"><label>Email *</label><input type="email" id="email" placeholder="your@email.com" required></div>
+                        <div class="form-group"><label>Phone</label><input type="tel" id="phone" placeholder="+1 234 567 8900"></div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group"><label>Tipo de Serviço *</label>
+                        <div class="form-group"><label>Service Type *</label>
                             <select id="service" required>
-                                <option value="">Selecionar...</option>
+                                <option value="">Select service...</option>
                                 <option>Product Inspection</option>
                                 <option>Factory Audit</option>
-                                <option>Inspeção de Carregamento</option>
+                                <option>Loading Inspection</option>
+                                <option>Service Pod (Monthly)</option>
                                 <option>Other</option>
                             </select>
                         </div>
-                        <div class="form-group"><label>País / Região *</label>
+                        <div class="form-group"><label>Country / Region *</label>
                             <select id="location" required>
                                 <option value="">Select country...</option>
-                                <optgroup label="East Africa"><option>Quênia</option><option>Tanzânia</option><option>Uganda</option><option>Etiópia</option><option>Rwanda</option></optgroup>
-                                <optgroup label="West Africa"><option>Nigéria</option><option>Ghana</option><option>Ivory Coast</option><option>Senegal</option><option>Camarões</option></optgroup>
-                                <optgroup label="North Africa"><option>Egito</option><option>Algeria</option><option>Morocco</option><option>Libya</option><option>Tunisia</option></optgroup>
-                                <optgroup label="Middle East"><option>Arábia Saudita</option><option>EAU</option><option>Qatar</option><option>Kuwait</option><option>Oman</option><option>Iraq</option></optgroup>
-                                <optgroup label="Southern Africa"><option>África do Sul</option><option>Moçambique</option><option>Zambia</option><option>Botswana</option><option>Namibia</option></optgroup>
+                                <optgroup label="East Africa"><option>Kenya</option><option>Tanzania</option><option>Uganda</option><option>Ethiopia</option><option>Rwanda</option></optgroup>
+                                <optgroup label="West Africa"><option>Nigeria</option><option>Ghana</option><option>Ivory Coast</option><option>Senegal</option><option>Cameroon</option></optgroup>
+                                <optgroup label="North Africa"><option>Egypt</option><option>Algeria</option><option>Morocco</option><option>Libya</option><option>Tunisia</option></optgroup>
+                                <optgroup label="Middle East"><option>Saudi Arabia</option><option>UAE</option><option>Qatar</option><option>Kuwait</option><option>Oman</option><option>Iraq</option></optgroup>
+                                <optgroup label="Southern Africa"><option>South Africa</option><option>Mozambique</option><option>Zambia</option><option>Botswana</option><option>Namibia</option></optgroup>
                                 <optgroup label="Central Africa"><option>Angola</option><option>DR Congo</option><option>Gabon</option><option>Equatorial Guinea</option><option>Chad</option></optgroup>
                             </select>
                         </div>
                     </div>
-                    <div class="form-group"><label>Detalhes do Projeto</label><textarea id="message" placeholder="Tell us about your project, requirements, and timeline..."></textarea></div>
-                    <button type="submit" class="btn btn-primary form-submit">Enviar Solicitação</button>
+                    <div class="form-group"><label>Project Details</label><textarea id="message" placeholder="Tell us about your project, requirements, and timeline..."></textarea></div>
+                    <button type="submit" class="btn btn-primary form-submit">Submit Request</button>
                 </form>
             </div>
         </div>
@@ -752,43 +1034,50 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo"><img src="180x60-蓝.png" alt="NovaSQC"></a>
-                    <p>A NovaSQC é sua melhor escolha para serviços de inspeção de terceira parte na África e no Oriente Médio. Inspeções de produtos, auditorias de fábricas e supervisão de carregamento — with certified inspectors across the region.</p>
+                    <a href="#" class="logo"><img src="../180x60-蓝.png" alt="NovaSQC"></a>
+                    <p>NovaSQC is your best choice for third-party inspection services in Africa and Middle East. Product inspections, factory audits, and loading supervision — with certified inspectors across the region.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">X</a>
+                        <a href="#">IN</a>
+                    </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Serviços</h4>
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="#services">Inspeções de Produtos</a></li>
-                        <li><a href="#services">Auditorias de Fábrica</a></li>
-                        <li><a href="#services">Inspeção de Carregamento</a></li>
+                        <li><a href="#services">Product Inspections</a></li>
+                        <li><a href="#services">Factory Audits</a></li>
+                        <li><a href="#services">Loading Inspection</a></li>
+                        <li><a href="#factory-audit">Audit Details</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Coverage</h4>
                     <ul>
-                        <li><a href="#coverage">África Oriental</a></li>
-                        <li><a href="#coverage">África Ocidental</a></li>
-                        <li><a href="#coverage">Norte da África</a></li>
-                        <li><a href="#coverage">Oriente Médio</a></li>
+                        <li><a href="#coverage">East Africa</a></li>
+                        <li><a href="#coverage">West Africa</a></li>
+                        <li><a href="#coverage">North Africa</a></li>
+                        <li><a href="#coverage">Middle East</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Languages</h4>
                     <ul>
-                        <li><a href="./">English</a></li>
-                        <li><a href="./fr/">Français</a></li>
-                        <li><a href="./pt/">Português</a></li>
-                        <li><a href="./sw/">Kiswahili</a></li>
-                        <li><a href="./ar/">العربية</a></li>
-                        <li><a href="./ha/">Hausa</a></li>
-                        <li><a href="./am/">አማርኛ</a></li>
-                        <li><a href="./sn/">Shona</a></li>
-                        <li><a href="./zu/">Zulu</a></li>
+                        <li><a href="../">English</a></li>
+                        <li><a href="../zh/">中文</a></li>
+                        <li><a href="./">Français</a></li>
+                        <li><a href="../pt/">Português</a></li>
+                        <li><a href="../sw/">Kiswahili</a></li>
+                        <li><a href="../ar/">العربية</a></li>
+                        <li><a href="../ha/">Hausa</a></li>
+                        <li><a href="../am/">አማርኛ</a></li>
+                        <li><a href="../sn/">Shona</a></li>
+                        <li><a href="../zu/">Zulu</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 NovaSQC — Shenzhen NovaSQC Inspection Testing Technology Services Co., Ltd. Todos os direitos reservados.</p>
+                <p>© 2026 NovaSQC — Shenzhen NovaSQC Inspection Testing Technology Services Co., Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -796,15 +1085,15 @@
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const service = document.getElementById('service').value;
-            const location = document.getElementById('location').value;
-            const company = document.getElementById('company').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            const body = encodeURIComponent(`Name: ${name}\nCompany: ${company}\nE-mail: ${email}\nTelefone: ${phone}\nService: ${service}\nCountry: ${location}\n\nDetalhes do Projeto:\n${message}`);
-            window.location.href = `mailto:info@novasqc.com?subject=Inspection Request - ${service} - ${location}&body=${body}`;
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var service = document.getElementById('service').value;
+            var location = document.getElementById('location').value;
+            var company = document.getElementById('company').value;
+            var phone = document.getElementById('phone').value;
+            var message = document.getElementById('message').value;
+            var body = encodeURIComponent('Name: ' + name + '\nCompany: ' + company + '\nEmail: ' + email + '\nPhone: ' + phone + '\nService: ' + service + '\nCountry: ' + location + '\n\nProject Details:\n' + message);
+            window.location.href = 'mailto:info@novasqc.com?subject=Inspection Request - ' + service + ' - ' + location + '&body=' + body;
         });
     </script>
 </body>
