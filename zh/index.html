@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaSQC | 非洲和中东第三方检验服务</title>
-    <meta name="description" content="专业第三方检验服务，覆盖非洲和中东地区。产品检验、工厂审计、装货监督。10年以上经验，500+项目完成，2000+客户好评。API 1169, CWI, NACE, ISO 9001认证检验员。">
-    <meta name="keywords" content="third-party inspection, product inspection, factory audit, loading inspection, Africa inspection services, Middle East inspection, quality control, Nigeria, Egypt, Kenya, Saudi Arabia, UAE">
+    <title>NovaSQC | 中国检验服务 & 产品质量检验</title>
+    <meta name="description" content="专业第三方检验服务。产品检验、工厂审计、装货监督。10年以上经验，500+项目完成。">
+    <meta name="keywords" content="china inspection, product inspection, factory audit, loading inspection, quality control, china QC, inspection company">
     <meta name="author" content="NovaSQC">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://novasqc.github.io/novasqc-inspection/zh/">
 
-    <meta name="geo.region" content="Africa, Middle East">
+    <meta name="geo.region" content="CN">
+    <meta name="geo.placename" content="China">
 
     <link rel="alternate" hreflang="zh" href="https://novasqc.github.io/novasqc-inspection/">
     <link rel="alternate" hreflang="zh" href="https://novasqc.github.io/novasqc-inspection/zh/">
@@ -26,8 +27,8 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://novasqc.github.io/novasqc-inspection/">
-    <meta property="og:title" content="NovaSQC | Third-Party Inspection Services for Africa & Middle East">
-    <meta property="og:description" content="Professional third-party inspection services across Africa and Middle East. Product inspections, factory audits, loading supervision. Certified inspectors.">
+    <meta property="og:title" content="NovaSQC | China Inspection Services & Product Quality Inspection">
+    <meta property="og:description" content="Professional third-party inspection services in China. Product inspections, factory audits, loading supervision.">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:image" content="https://novasqc.github.io/novasqc-inspection/1200x400-蓝.png">
 
@@ -42,10 +43,10 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "NovaSQC Inspection Services",
-        "description": "Professional third-party inspection services across Africa and Middle East. Product inspections, factory audits, loading supervision.",
+        "description": "Professional third-party inspection services in China. Product inspections, factory audits, loading supervision.",
         "url": "https://novasqc.github.io/novasqc-inspection/",
         "email": "info@novasqc.com",
-        "areaServed": ["Africa", "Middle East", "Nigeria", "Egypt", "Kenya", "Saudi Arabia", "UAE", "South Africa", "Tanzania", "Ghana", "Qatar", "Mozambique", "Angola"]
+        "areaServed": ["China", "Qingdao", "Shenzhen", "Guangzhou", "Shanghai", "Yiwu"]
     }
     </script>
 
@@ -98,9 +99,6 @@
 
         .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; }
         .hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: 100px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 20px; }
-        .hero-badge .dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
-        @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.5;} }
         .hero h1 { font-size: clamp(2.2rem,5vw,3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
         .hero h1 span { color: var(--accent); }
         .hero p { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; max-width: 560px; }
@@ -113,46 +111,23 @@
         .hero-image { display: flex; justify-content: center; align-items: center; }
         .hero-image img { width: 280px; height: 280px; border-radius: 24px; box-shadow: 0 0 80px rgba(32,112,240,0.3); object-fit: cover; }
 
-        .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; padding-top: 40px; border-top: 1px solid var(--border); }
-        .stat { text-align: center; }
-        .stat-value { font-size: 2rem; font-weight: 800; color: var(--accent); font-family: var(--font-mono); }
-        .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+        .got-question { background: var(--bg-secondary); padding: 20px 0; text-align: center; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .got-question p { color: var(--text-secondary); font-size: 0.95rem; }
+        .got-question strong { color: var(--accent); }
 
         section { padding: 100px 0; }
         .section-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 16px; text-align: center; }
         .section-subtitle { text-align: center; color: var(--text-secondary); max-width: 640px; margin: 0 auto 60px; font-size: 1.05rem; }
         .section-divider { width: 60px; height: 4px; background: var(--accent); margin: 0 auto 20px; border-radius: 2px; }
 
-        .about-section { background: var(--bg-secondary); }
+        /* Professional Staff */
+        .pro-staff { padding: 80px 0; }
+        .pro-staff-list { max-width: 700px; margin: 40px auto 0; list-style: none; }
+        .pro-staff-list li { padding: 12px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 12px; color: var(--text-secondary); font-size: 0.95rem; }
+        .pro-staff-list li::before { content: '✓ '; color: var(--success); font-weight: 600; margin-right: 8px; }
 
-        /* Professional Staff Section */
-        .pro-staff { padding: 80px 0; background: var(--bg-secondary); }
-        .pro-staff-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 40px; }
-        .pro-staff-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
-        .pro-staff-item .icon { width: 48px; height: 48px; background: var(--bg-glass); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
-        .pro-staff-item h4 { font-size: 0.9rem; margin-bottom: 4px; }
-        .pro-staff-item p { font-size: 0.8rem; color: var(--text-muted); }
-
-        .about-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; margin-top: 60px; }
-        .about-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; text-align: center; transition: all 0.3s; }
-        .about-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-        .about-icon { width: 64px; height: 64px; background: linear-gradient(135deg, var(--accent), var(--accent-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.8rem; }
-        .about-card h3 { font-size: 1.1rem; margin-bottom: 12px; }
-        .about-card p { color: var(--text-secondary); font-size: 0.875rem; }
-
-        .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; }
-        .vm-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; }
-        .vm-card h3 { font-size: 1.3rem; margin-bottom: 16px; color: var(--accent); }
-        .vm-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
-
-        /* Why Us */
-        .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 60px; }
-        .why-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: all 0.3s; }
-        .why-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-        .why-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--accent); }
-        .why-card p { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6; }
-
-        /* Pricing */
+        /* Why Us / Pricing */
+        .why-section { background: var(--bg-secondary); }
         .pricing-breakdown-intro { text-align: center; color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
         .price-break-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; align-items: start; }
         .pb-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
@@ -185,63 +160,28 @@
         .service-pod-callout ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 20px; }
         .service-pod-callout li { background: var(--bg-glass); padding: 8px 16px; border-radius: 100px; font-size: 0.8rem; color: var(--text-secondary); }
 
-        /* Services */
-        .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
-        .service-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px 32px; transition: all 0.3s; }
-        .service-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(32,112,240,0.1); }
-        .service-card h3 { font-size: 1.3rem; margin-bottom: 16px; }
-        .service-card .service-desc { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px; line-height: 1.6; }
-        .service-card ul { list-style: none; }
-        .service-card li { padding: 6px 0; color: var(--text-muted); font-size: 0.875rem; border-bottom: 1px solid var(--border); }
-        .service-card li:last-child { border-bottom: none; }
-        .service-card li::before { content: '✓ '; color: var(--success); }
+        /* Stats */
+        .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; padding-top: 40px; border-top: 1px solid var(--border); margin-top: 60px; }
+        .stat { text-align: center; }
+        .stat-value { font-size: 2rem; font-weight: 800; color: var(--accent); font-family: var(--font-mono); }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
 
         /* Product Categories */
+        .cat-section { background: var(--bg-secondary); }
         .cat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; margin-top: 60px; }
         .cat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
         .cat-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--accent); }
-        .cat-card p { color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 16px; }
+        .cat-card > p { color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 16px; }
         .cat-card ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
         .cat-card li { background: var(--bg-glass); padding: 4px 10px; border-radius: 100px; font-size: 0.75rem; color: var(--text-muted); }
 
-        /* Coverage */
-        .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 24px; }
-        .coverage-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: all 0.3s; }
-        .coverage-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-        .coverage-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--accent); }
-        .coverage-card p { color: var(--text-secondary); font-size: 0.875rem; }
-        .coverage-card .countries { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-        .coverage-card .countries span { background: var(--bg-glass); padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; color: var(--text-muted); }
-
-        /* 工作流程 */
-        .steps-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; position: relative; }
-        .steps-grid::before { content: ''; position: absolute; top: 36px; left: 12%; right: 12%; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
-        .step { text-align: center; position: relative; z-index: 1; }
-        .step-num { width: 72px; height: 72px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 16px; box-shadow: 0 0 40px var(--accent-glow); }
-        .step h4 { font-size: 0.85rem; margin-bottom: 6px; }
-        .step p { color: var(--text-secondary); font-size: 0.75rem; }
-
-        /* 工厂审计 Detail */
-        .audit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 60px; }
-        .audit-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; }
-        .audit-card h3 { font-size: 1.2rem; margin-bottom: 20px; color: var(--accent); }
-        .audit-card ul { list-style: none; }
-        .audit-card li { padding: 8px 0; color: var(--text-secondary); font-size: 0.875rem; border-bottom: 1px solid var(--border); }
-        .audit-card li:last-child { border-bottom: none; }
-        .audit-card li::before { content: '✓ '; color: var(--success); }
-
-        .sustainable-results { margin-top: 60px; }
-        .sr-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 24px; }
-        .sr-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
-        .sr-card h4 { font-size: 0.95rem; margin-bottom: 8px; color: var(--text-primary); }
-        .sr-card p { font-size: 0.825rem; color: var(--text-muted); }
-
-        /* Testimonials */
-        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 24px; margin-top: 60px; }
-        .testimonial-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
-        .testimonial-card .stars { color: #f59e0b; margin-bottom: 12px; font-size: 1.1rem; }
-        .testimonial-card p { color: var(--text-secondary); font-size: 0.9rem; font-style: italic; margin-bottom: 16px; line-height: 1.6; }
-        .testimonial-card .author { color: var(--accent); font-weight: 600; font-size: 0.875rem; }
+        /* Services Links */
+        .services-links { background: var(--bg-secondary); padding: 60px 0; }
+        .svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; margin-top: 40px; }
+        .svc-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: all 0.3s; }
+        .svc-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .svc-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--accent); }
+        .svc-card p { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6; }
 
         /* FAQ */
         .faq-list { max-width: 800px; margin: 60px auto 0; }
@@ -250,20 +190,28 @@
         .faq-item summary::after { content: '+'; font-size: 1.5rem; color: var(--accent); }
         .faq-item[open] summary::after { content: '−'; }
         .faq-item .answer { padding: 0 24px 20px; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; }
+        .faq-item .answer ol { padding-left: 20px; margin: 8px 0; }
+        .faq-item .answer li { margin-bottom: 4px; }
 
-        /* Blog Preview */
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 24px; margin-top: 60px; }
-        .blog-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: all 0.3s; }
-        .blog-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-        .blog-card .date { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; }
-        .blog-card h3 { font-size: 0.95rem; margin-bottom: 8px; line-height: 1.4; }
-        .blog-card p { font-size: 0.825rem; color: var(--text-muted); }
-        .blog-card .tag { display: inline-block; background: var(--bg-glass); color: var(--accent); font-size: 0.7rem; padding: 2px 8px; border-radius: 100px; margin-top: 8px; }
+        /* Testimonials */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 24px; margin-top: 60px; }
+        .testimonial-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+        .testimonial-card .stars { color: #f59e0b; margin-bottom: 12px; font-size: 1.1rem; }
+        .testimonial-card p { color: var(--text-secondary); font-size: 0.9rem; font-style: italic; margin-bottom: 16px; line-height: 1.6; }
+        .testimonial-card .author { color: var(--accent); font-weight: 600; font-size: 0.875rem; }
 
-        /* Contact */
+        /* About Section */
+        .about-section { background: var(--bg-secondary); }
+        .about-intro { text-align: center; color: var(--text-secondary); max-width: 800px; margin: 0 auto 40px; font-size: 1rem; line-height: 1.8; }
+        .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .vm-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; }
+        .vm-card h3 { font-size: 1.3rem; margin-bottom: 16px; color: var(--accent); }
+        .vm-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
+
+        /* 联系 */
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; }
         .contact-info h3 { font-size: 1.3rem; margin-bottom: 20px; }
-        .contact-info > p { color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem; }
+        .contact-info > p { color: var(--text-secondary); margin-bottom: 24px; }
         .contact-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
         .contact-item .icon { width: 40px; height: 40px; background: var(--bg-glass); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.1rem; }
         .contact-item strong { display: block; font-size: 0.875rem; margin-bottom: 2px; }
@@ -278,30 +226,15 @@
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .form-submit { width: 100%; }
 
-        footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 60px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-        .footer-brand p { color: var(--text-secondary); font-size: 0.875rem; margin-top: 16px; line-height: 1.6; }
-        .footer-col h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 16px; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 10px; }
-        .footer-col a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
-        .footer-col a:hover { color: var(--accent); }
-        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem; }
-
-        .social-links { display: flex; gap: 12px; margin-top: 16px; }
-        .social-links a { width: 36px; height: 36px; background: var(--bg-glass); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; transition: all 0.2s; }
-        .social-links a:hover { background: var(--accent); color: #fff; }
+        footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 60px 0 30px; text-align: center; }
+        footer p { color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
 
         @media(max-width: 1024px) {
             .price-break-grid { grid-template-columns: 1fr; }
-            .about-grid { grid-template-columns: repeat(2,1fr); }
-            .services-grid { grid-template-columns: 1fr; }
-            .audit-grid { grid-template-columns: 1fr; }
             .cat-grid { grid-template-columns: 1fr; }
-            .pro-staff-grid { grid-template-columns: 1fr; }
-            .why-grid { grid-template-columns: 1fr 1fr; }
-            .steps-grid { grid-template-columns: repeat(2,1fr); }
-            .steps-grid::before { display: none; }
+            .svc-grid { grid-template-columns: 1fr; }
         }
         @media(max-width: 768px) {
             .hero .container { grid-template-columns: 1fr; text-align: center; }
@@ -309,11 +242,8 @@
             .hero-actions { justify-content: center; }
             .hero-image { order: -1; }
             .stats { grid-template-columns: repeat(2,1fr); }
-            .about-grid { grid-template-columns: 1fr; }
             .vm-grid { grid-template-columns: 1fr; }
             .contact-wrapper { grid-template-columns: 1fr; }
-            .why-grid { grid-template-columns: 1fr; }
-            .sr-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
             .nav-links { display: none; }
             .mobile-menu-btn { display: block; }
@@ -351,10 +281,9 @@
             <ul class="nav-links">
                 <li><a href="#about">关于我们</a></li>
                 <li><a href="#services">服务</a></li>
-                <li><a href="#why">为什么选我们</a></li>
                 <li><a href="#pricing">价格</a></li>
                 <li><a href="#faq">常见问题</a></li>
-                <li><a href="#contact" class="nav-cta">获取报价</a></li>
+                <li><a href="#contact" class="nav-cta">联系我们</a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
         </div>
@@ -364,18 +293,11 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge"><span class="dot"></span> 10+ Years · 500+ Projects · Certified Inspectors</div>
-                <h1>The Best Brands Have a Quality Control Team on the Ground in <span>Africa & Middle East</span></h1>
-                <p>如果您正在非洲和中东寻找质量控制合作伙伴, you've come to the right place. NovaSQC provides professional third-party inspection, factory audit, and loading supervision services — with certified inspectors who speak your language and know your region.</p>
+                <h1>最好的品牌在中国有现场质量控制团队</h1>
+                <p>如果您正在中国寻找质量控制合作伙伴, you've come to the right place. NovaSQC 在中国提供专业的第三方检验、工厂审计和装货监督服务 — 配备了解您语言、通过认证的检验员。</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">立即预约</a>
-                    <a href="#services" class="btn btn-secondary">了解服务</a>
-                </div>
-                <div class="stats">
-                    <div class="stat"><div class="stat-value">10+</div><div class="stat-label">年行业经验</div></div>
-                    <div class="stat"><div class="stat-value">500+</div><div class="stat-label">已完成项目</div></div>
-                    <div class="stat"><div class="stat-value">25+</div><div class="stat-label">覆盖国家</div></div>
-                    <div class="stat"><div class="stat-value">2k+</div><div class="stat-label">客户好评</div></div>
+                    <a href="#contact" class="btn btn-primary">联系我们</a>
+                    <a href="#services" class="btn btn-secondary">我们的服务</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -384,453 +306,225 @@
         </div>
     </section>
 
+    <!-- Got a question -->
+    <div class="got-question">
+        <div class="container">
+            <p>对我们的服务有疑问？<br><strong>邮箱：info@novasqc.com</strong><br>（我们的专家在24小时内回复邮件）</p>
+        </div>
+    </div>
+
     <!-- Professional Staffs -->
     <section class="pro-staff">
         <div class="container">
-            <h2 class="section-title">专业检验员</h2>
+            <h2 class="section-title">专业员工</h2>
             <div class="section-divider"></div>
-            <p class="section-subtitle">我们团队的每位检验员都符合最高专业标准。</p>
 
-            <div class="pro-staff-grid">
-                <div class="pro-staff-item">
-                    <div class="icon">🏅</div>
-                    <div>
-                        <h4>认证检验员</h4>
-                        <p>API 1169、CWI、NACE 认证。由国际认可机构认证，至少4年以上现场经验。</p>
+            <ul class="pro-staff-list">
+                <li>至少4年以上的质量检验经验。</li>
+                <li>由 ASQ 或 AQSIQ 认证的质量检验经验。</li>
+                <li>48小时内启动检验/审计。</li>
+                <li>12小时内出具报告。</li>
+                <li>不满意，全额退款。</li>
+                <li>可提前至当地时间前一天下午4点取消预约。</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Why Choose Novas QC / Pricing -->
+    <section id="pricing" class="why-section">
+        <div class="container">
+            <h2 class="section-title">为什么选择 Novas QC？</h2>
+            <div class="section-divider"></div>
+
+            <p class="pricing-breakdown-intro">您可以在网上搜索中国检验公司 and get 1000s of competitors, but at Novas QC, 但在 Novas QC，我们做的远不止检验。</p>
+
+            <div class="price-break-grid">
+                <div class="pb-card bad">
+                    <h3>低价检验提供商、货代和采购代理</h3>
+                    <div class="price-costs">
+                        <div class="cost-row"><span>Labor</span><span></span></div>
+                        <div class="cost-row"><span>Admin</span><span></span></div>
+                        <div class="cost-row"><span>Margin</span><span></span></div>
                     </div>
+                    <div class="price-tag">$250-350<span>/Day</span></div>
+                    <ul>
+                        <li>检验员时间配额不合理</li>
+                        <li>报告质量差、无一对一服务</li>
+                        <li>结果不可靠、不一致</li>
+                        <li>未经培训的检验员</li>
+                        <li>英语差、沟通障碍</li>
+                        <li>高欺诈风险</li>
+                    </ul>
                 </div>
-                <div class="pro-staff-item">
-                    <div class="icon">⚡</div>
-                    <div>
-                        <h4>48小时内启动</h4>
-                        <p>检验和审计预订通常可在48小时内启动 of your request — no long waiting periods.</p>
+
+                <div class="pb-card good">
+                    <h3>Industry Average</h3>
+                    <div class="price-costs">
+                        <div class="cost-row"><span>检验员时间 & 差旅成本</span><span>~60%</span></div>
+                        <div class="cost-row"><span>培训 & 审计</span><span>~10%</span></div>
+                        <div class="cost-row"><span>Margin</span><span>~30%</span></div>
                     </div>
+                    <div class="price-tag">$600-900<span>/Day</span></div>
+                    <ul>
+                        <li>无一对一专属服务或专属团队</li>
+                        <li>结果不可靠、不一致</li>
+                        <li>经过培训的检验员</li>
+                        <li>英语差、沟通障碍</li>
+                    </ul>
                 </div>
-                <div class="pro-staff-item">
-                    <div class="icon">📋</div>
-                    <div>
-                        <h4>12小时内出报告</h4>
-                        <p>在12小时内收到带详细结果和照片的图文检验报告 of the on-site visit.</p>
+
+                <div class="pb-card best">
+                    <h3>NovaSQC — Service Pod</h3>
+                    <div class="price-costs">
+                        <div class="cost-row"><span>Trained, Bilingual Inspector Time & Travel Costs</span><span></span></div>
+                        <div class="cost-row"><span>培训 & 审计</span><span></span></div>
+                        <div class="cost-row"><span>Your Service Pod</span><span></span></div>
+                        <div class="cost-row"><span>Novas QC's Margin</span><span></span></div>
                     </div>
+                    <div class="price-tag">$7,900+<span>/Mo</span></div>
+                    <ul>
+                        <li>Native English Service Pod (Your Own Team)</li>
+                        <li>Video & Photo Reports with Factory Overview</li>
+                        <li>Pay Only For Actual Inspector Time</li>
+                        <li>Custom instructions for unique products</li>
+                        <li>Continuously Improving Recommendations</li>
+                    </ul>
                 </div>
-                <div class="pro-staff-item">
-                    <div class="icon">💯</div>
-                    <div>
-                        <h4>不满意，全额退款</h4>
-                        <p>如果您对检验质量不满意，我们将免费复检 at no additional cost or provide a full refund.</p>
-                    </div>
-                </div>
-                <div class="pro-staff-item">
-                    <div class="icon">📅</div>
-                    <div>
-                        <h4>免费取消</h4>
-                        <p>可在预定日期前一天当地时间下午4点前免费取消或重新安排 the scheduled date at no charge.</p>
-                    </div>
-                </div>
-                <div class="pro-staff-item">
-                    <div class="icon">🌍</div>
-                    <div>
-                        <h4>非洲和中东覆盖</h4>
-                        <p>在非洲和中东25+国家设有专职检验员 to serve you efficiently.</p>
-                    </div>
-                </div>
+            </div>
+
+            <!-- Service Pod callout -->
+            <div class="service-pod-callout">
+                <h3>用一次检验的价格，获得整个质量控制团队！</h3>
+                <p>Trained, Bilingual Inspector Time & Travel Costs · 培训 & 审计 · Your Service Pod · Novas QC's Margin</p>
+                <div class="pod-price">$7,900+<span>/Mo</span></div>
+                <ul>
+                    <li>Inspector x1</li>
+                    <li>Travel Costs & Incidentals</li>
+                    <li>Training, Auditing, & Management</li>
+                    <li>一对一个性化支持</li>
+                    <li>高薪资、差旅、培训开销</li>
+                    <li>未达到行业标准</li>
+                    <li>High risk of fraud</li>
+                    <li>无来自类似品牌的质量控制洞察</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- About / 我们是谁 -->
+    <!-- About Section -->
     <section class="about-section" id="about">
         <div class="container">
-            <h2 class="section-title">您在非洲和中东的检验合作伙伴</h2>
+            <h2 class="section-title">您在中国的检验员！</h2>
             <div class="section-divider"></div>
-            <p class="section-subtitle">NovaSQC 是您在非洲和中东选择第三方检验服务的最佳选择。</p>
 
-            <p style="text-align:center; color:var(--text-secondary); max-width:800px; margin:0 auto 60px; font-size:1rem; line-height:1.8;">
-                当您在非洲和中东地区采购或运营项目时, 大多数买家面临各种风险，包括质量问题 and quantity discrepancies to concerns about supplier compliance. 为让您的项目更安全、更省心, NovaSQC 致力于为各种规模的公司提供最可靠、最具成本效益的质量控制解决方案 to companies of all sizes.
-            </p>
+            <p class="about-intro">从中国采购时，大多数进口商很可能面临各种风险, 包括质量问题、数量差异、装运延迟 and 以及对制造商社会合规性的担忧。 为了让进口更简单、更安全，Novas QC 努力提供最可靠 且具成本效益的质量控制解决方案，服务于从中国采购的大小企业。</p>
 
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-icon">👷</div>
-                    <h3>我们是谁</h3>
-                    <p>NovaSQC 在非洲和中东拥有10年以上经验和认证检验员，已服务来自美洲、欧洲、大洋洲、亚洲和非洲的500+客户。</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon">🔍</div>
-                    <h3>我们检验什么</h3>
-                    <p>我们提供从出货前到装货的独立检验服务。 Our services cover product inspections, factory audits, and loading supervision.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon">⭐</div>
-                    <h3>为什么选我们</h3>
-                    <p>我们不止步于基础检验。 Our inspectors deliver detailed, photo-documented 12小时内出图文报告。不满意？全额退款。 It's that simple.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon">⚙️</div>
-                    <h3>工作流程</h3>
-                    <p>简单4步流程：填写预约表单 → We confirm with supplier → We perform inspection → You receive report within 12 hours.</p>
-                </div>
+            <div class="stats">
+                <div class="stat"><div class="stat-value">10+</div><div class="stat-label">年行业经验</div></div>
+                <div class="stat"><div class="stat-value">60+</div><div class="stat-label">优秀员工</div></div>
+                <div class="stat"><div class="stat-value">60+</div><div class="stat-label">覆盖中国城市</div></div>
+                <div class="stat"><div class="stat-value">500+</div><div class="stat-label">已完成项目</div></div>
             </div>
 
             <div class="vm-grid">
                 <div class="vm-card">
-                    <h3>🎯 我们的愿景</h3>
-                    <p>成为非洲和中东地区首选的第三方质量控制和检验服务提供商, 以技术卓越赢得客户信赖, unwavering commitment to quality, and trusted by clients across the region.</p>
+                    <h3>我们的愿景</h3>
+                    <p>成为全球消费品采购质量控制服务的首选供应商。</p>
                 </div>
                 <div class="vm-card">
-                    <h3>📜 我们的使命</h3>
-                    <p>我们致力于运用专业知识和经验，成为客户在非洲和中东的双眼和双手 — 帮助客户在项目及供应链的每个阶段确保质量、安全和合规，走向成功 of their projects and supply chains.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Us -->
-    <section id="why">
-        <div class="container">
-            <h2 class="section-title">为什么选择 NovaSQC？</h2>
-            <div class="section-divider"></div>
-            <p class="section-subtitle">自成立以来，帮助客户在非洲和中东地区进行质量控制一直是我们唯一的专注。</p>
-
-            <div class="why-grid">
-                <div class="why-card">
-                    <h3>💰 成本效益</h3>
-                    <p>We are confident that 很少有公司能提供同等级别的 of quality control solutions at our rates. Our Service Pod model delivers an entire QC team for the price of a single inspection — 起价仅 $7,900/月.</p>
-                </div>
-                <div class="why-card">
-                    <h3>🎯 丰富经验与专注专业</h3>
-                    <p>10年以上经验，我们始终专注于工业和基础设施项目。 We do what we are good at — and we do it across Africa and Middle East.</p>
-                </div>
-                <div class="why-card">
-                    <h3>⚡ 快速响应与服务</h3>
-                    <p>专家在24小时内回复所有问题和咨询。检验完成后12小时内送达报告 of inspection completion. 可应要求当日提供报告草稿。</p>
-                </div>
-                <div class="why-card">
-                    <h3>🔄 灵活性</h3>
-                    <p>We try every possible way to meet your special needs — 包括无提前通知的服务、前一天下午4点前免费取消、特殊报告格式和定制方案, special report formats, and customized programs.</p>
-                </div>
-                <div class="why-card">
-                    <h3>🌍 全国和区域覆盖</h3>
-                    <p>在非洲和中东25+国家设有专职认证检验员 across Africa and Middle East — from East Africa to the Gulf states — to serve you efficiently wherever your projects are.</p>
-                </div>
-                <div class="why-card">
-                    <h3>✅ 可追溯性和可信度</h3>
-                    <p>10年以上可靠记录和500+满意客户。 我们的检验员持有包括 API 1169、CWI、NACE 和 ISO 9001 在内的国际认可认证。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services">
-        <div class="container">
-            <h2 class="section-title">了解服务</h2>
-            <div class="section-divider"></div>
-            <p class="section-subtitle">NovaSQC 提供从生产开始到集装箱装货的全面独立检验服务。</p>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>🔍 产品检验</h3>
-                    <p class="service-desc">NovaSQC 提供从生产开始到集装箱装货的全面独立检验服务。 由合格且经验丰富的检验员执行，为客户清晰呈现生产的真实状况。</p>
-                    <ul>
-                        <li>首件检验（生产前）</li>
-                        <li>中期检验（生产中）</li>
-                        <li>最终随机检验</li>
-                        <li>缺陷分拣与排除</li>
-                        <li>生产监控</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>📋 工厂审计</h3>
-                    <p class="service-desc">找到正确且负责任的生产合作伙伴可以带来真正的改变。 Get validated first-hand reports on supplier capability and compliance before you commit.</p>
-                    <ul>
-                        <li>简易工厂审计（概况、产能、照片）</li>
-                        <li>全面工厂审计（质量、社会责任、安全）</li>
-                        <li>供应商能力评估</li>
-                        <li>质量管理体系审查</li>
-                        <li>社会责任与道德合规审计</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>🚢 装货检验</h3>
-                    <p class="service-desc">集装箱装货监督确保您的成品在装入集装箱时得到正确处理 when loaded into containers to ensure safe transportation and delivery to their final destination in a satisfactory condition.</p>
-                    <ul>
-                        <li>集装箱状况</li>
-                        <li>产品规格</li>
-                        <li>运输标志、包装与标签</li>
-                        <li>Loading Supervision</li>
-                        <li>文档与装货数量</li>
-                    </ul>
+                    <h3>我们的使命</h3>
+                    <p>我们致力于运用专业知识和经验，成为客户在中国的双眼和双手 帮助他们在全球采购中取得成功。</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Product Categories -->
-    <section id="categories" style="background: var(--bg-secondary);">
+    <section class="cat-section" id="categories">
         <div class="container">
-            <h2 class="section-title">服务行业</h2>
-            <div class="section-divider"></div>
-            <p class="section-subtitle">NovaSQC 在众多不同行业的产品检验和供应商审计方面拥有专业能力。</p>
-
             <div class="cat-grid">
                 <div class="cat-card">
-                    <h3>🏗️ 重工业品</h3>
-                    <p>使用寿命超过3年的耐用商品和工业设备。</p>
+                    <h3>软商品</h3>
+                    <p>非耐用品的子集，包括不仅"软"商品，还有使用寿命通常少于3年的商品。</p>
                     <ul>
-                        <li>管道、阀门及配件</li>
-                        <li>钢铁及金属结构</li>
-                        <li>工业机械</li>
-                        <li>建筑材料</li>
-                        <li>工具及设备</li>
-                        <li>油气设备</li>
+                        <li>帽子</li>
+                        <li>面料</li>
+                        <li>鞋类及皮革产品</li>
+                        <li>服装及配饰</li>
+                        <li>行李箱、包及箱子</li>
                     </ul>
                 </div>
                 <div class="cat-card">
-                    <h3>⚡ 电气与电子</h3>
-                    <p>工业和消费用的电气设备和电子元件。</p>
+                    <h3>硬商品</h3>
+                    <p>耐用商品的子集，包括不仅"硬"商品，还有使用寿命超过3年的商品。</p>
                     <ul>
-                        <li>电动工具及电机</li>
-                        <li>配电设备</li>
-                        <li>电缆和接线</li>
-                        <li>控制面板</li>
-                        <li>照明设备</li>
-                        <li>电子配件</li>
+                        <li>电脑配件电动工具</li>
+                        <li>电动汽车</li>
+                        <li>电子产品配件</li>
+                        <li>健康与美容产品</li>
+                        <li>照明产品</li>
+                        <li>遥控玩具</li>
+                        <li>电话及手机</li>
                     </ul>
                 </div>
                 <div class="cat-card">
-                    <h3>🏭 工业与机械</h3>
-                    <p>为其他行业制造使用或消费的产品 as opposed to direct retail consumers.</p>
+                    <h3>工业品</h3>
+                    <p>为其他行业或公司制造使用或消费的产品 而非直接供零售消费者购买的产品。</p>
                     <ul>
                         <li>机械零件</li>
-                        <li>金属板及加工</li>
-                        <li>塑料薄膜和聚合物</li>
-                        <li>包装材料</li>
+                        <li>金属板</li>
+                        <li>塑料薄膜</li>
+                        <li>包装及纸张</li>
                         <li>化工材料</li>
-                        <li>安全设备</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 工厂审计 Detail -->
-    <section id="factory-audit">
+    <!-- Services Links -->
+    <section class="services-links" id="services">
         <div class="container">
-            <h2 class="section-title">工厂审计 — 详细范围</h2>
+            <h2 class="section-title">NovaSQC 服务</h2>
             <div class="section-divider"></div>
 
-            <div class="audit-grid">
-                <div class="audit-card">
-                    <h3>📋 简易工厂审计</h3>
-                    <ul>
-                        <li>公司概况（工商注册、营业执照）</li>
-                        <li>详细员工人数和组织结构</li>
-                        <li>当前生产的产品</li>
-                        <li>一条生产线观察（工序步骤、机器类型和数量）</li>
-                        <li>总体组织概况（质量体系、工作环境、设备状况）</li>
-                        <li>工厂建筑、生产车间、仓库、办公区域照片</li>
-                        <li>营业执照、出口许可证及各项证书照片</li>
-                    </ul>
+            <div class="svc-grid">
+                <div class="svc-card">
+                    <h3>产品检验</h3>
+                    <p>NovaSQC 提供从生产开始到集装箱装货的全面独立检验服务</p>
                 </div>
-                <div class="audit-card">
-                    <h3>📋 全面工厂审计</h3>
-                    <ul>
-                        <li>公司概况和详细员工人数</li>
-                        <li>一条生产线的观察及产能评估</li>
-                        <li>质量管理体系简要审计</li>
-                        <li>社会责任政策简要审计：童工、强迫劳动、工时（随机访谈）</li>
-                        <li>安全政策简要审计：消防、疏散计划、化学危害、防护设备</li>
-                        <li>环境政策快速评估：废物处理、节能设备</li>
-                        <li>Photos of factory, workshop, warehouse, office, licenses and certificates</li>
-                    </ul>
+                <div class="svc-card">
+                    <h3>工厂审计</h3>
+                    <p>正确且负责任的生产合作伙伴可以带来真正的改变</p>
                 </div>
-            </div>
-
-            <div class="sustainable-results">
-                <h3 style="text-align:center; font-size:1.3rem; margin-bottom:8px;">🎯 可持续成果</h3>
-                <p style="text-align:center; color:var(--text-secondary); margin-bottom:24px;">我们的审计服务为您的供应链提供长期价值。</p>
-                <div class="sr-grid">
-                    <div class="sr-card">
-                        <h4>避免贸易欺诈</h4>
-                        <p>我们的审计服务确保您是与真实合法的供应商打交道 to avoid the risk of trade scam or fraud.</p>
-                    </div>
-                    <div class="sr-card">
-                        <h4>了解您的供应商</h4>
-                        <p>让您了解您是在与代理商还是直接与制造商打交道 so as to avoid middleman commission.</p>
-                    </div>
-                    <div class="sr-card">
-                        <h4>评估供应商能力</h4>
-                        <p>全面评估您的供应商，确保他们能够按时交付符合质量要求的货物。</p>
-                    </div>
-                    <div class="sr-card">
-                        <h4>持续改进</h4>
-                        <p>深入了解供应商的优势和劣势 and facilitate their continuous improvements.</p>
-                    </div>
-                    <div class="sr-card">
-                        <h4>保护企业形象</h4>
-                        <p>确保供应链符合社会责任要求，保护您的企业形象 and worthy of your trust.</p>
-                    </div>
-                    <div class="sr-card">
-                        <h4>为品牌认证做准备</h4>
-                        <p>协助并帮助您的供应商获得主要品牌和零售商的认证。</p>
-                    </div>
+                <div class="svc-card">
+                    <h3>装货检验</h3>
+                    <p>数量核对、装箱单核对、集装箱状况, 装货过程（纸箱状况、装箱程度等）</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing">
+    <!-- FAQ -->
+    <section id="faq">
         <div class="container">
-            <h2 class="section-title">非洲和中东质量控制服务价格</h2>
+            <h2 class="section-title">常见问题。</h2>
             <div class="section-divider"></div>
+            <p class="section-subtitle">如果您找不到想要的答案, please contact us directly.</p>
 
-            <p class="pricing-breakdown-intro">您可以在网上搜索非洲或中东的检验公司 and get 1,000s of competitors. But at NovaSQC, we do a lot more than just inspections.</p>
-
-            <div class="price-break-grid">
-                <div class="pb-card bad">
-                    <h3>低价供应商、货代和采购代理</h3>
-                    <div class="price-costs">
-                        <div class="cost-row"><span>人工成本</span><span>极低</span></div>
-                        <div class="cost-row"><span>Admin</span><span>无</span></div>
-                        <div class="cost-row"><span>利润</span><span>极高</span></div>
-                    </div>
-                    <div class="price-tag">$250–350<span>/天</span></div>
-                    <ul>
-                        <li>检验员时间配额不合理</li>
-                        <li>报告质量差，无一对一服务</li>
-                        <li>结果不可靠、不一致</li>
-                        <li>未经培训的检验员</li>
-                        <li>英语差、沟通障碍</li>
-                        <li>极高 Risk of Fraud</li>
-                    </ul>
-                </div>
-
-                <div class="pb-card good">
-                    <h3>行业平均水平</h3>
-                    <div class="price-costs">
-                        <div class="cost-row"><span>检验员时间 & 差旅</span><span>~60%</span></div>
-                        <div class="cost-row"><span>培训 & 审计</span><span>~10%</span></div>
-                        <div class="cost-row"><span>利润</span><span>~30%</span></div>
-                    </div>
-                    <div class="price-tag">$600–900<span>/天</span></div>
-                    <ul>
-                        <li>经过培训的检验员</li>
-                        <li>无一对一专属服务</li>
-                        <li>结果不可靠、不一致</li>
-                        <li>英语差、沟通障碍</li>
-                        <li>未达行业标准</li>
-                        <li>非洲中东覆盖有限</li>
-                    </ul>
-                </div>
-
-                <div class="pb-card best">
-                    <h3>NovaSQC — 服务套餐</h3>
-                    <div class="price-costs">
-                        <div class="cost-row"><span>双语检验员时间 & 差旅</span><span>~50%</span></div>
-                        <div class="cost-row"><span>Training, Auditing & Management</span><span>~25%</span></div>
-                        <div class="cost-row"><span>NovaSQC 利润</span><span>~25%</span></div>
-                    </div>
-                    <div class="price-tag">$7,900+<span>/Month</span></div>
-                    <ul>
-                        <li>母语级英语专属服务团队</li>
-                        <li>视频 & 照片报告含工厂概览</li>
-                        <li>按实际检验时间付费</li>
-                        <li>针对特殊产品的定制说明</li>
-                        <li>持续改进建议</li>
-                        <li>全非洲和中东覆盖</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="service-pod-callout">
-                <h3>用一次检验的价格，获得整个质量控制团队！</h3>
-                <p>我们的服务套餐模式为您提供专属支持 — without the overhead of hiring full-time staff.</p>
-                <div class="pod-price">$7,900+<span>/月</span></div>
-                <ul>
-                    <li>✓ Dedicated Service Pod</li>
-                    <li>✓ Video & Photo Inspection Reports</li>
-                    <li>✓ Factory Overview Documentation</li>
-                    <li>✓ Custom Product Instructions</li>
-                    <li>✓ 持续改进 Recommendations</li>
-                    <li>✓ 全非洲和中东覆盖</li>
-                </ul>
-                <a href="#contact" class="btn btn-primary" style="margin-top:20px">开启专属服务</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Coverage -->
-    <section id="coverage">
-        <div class="container">
-            <h2 class="section-title">服务覆盖 — 非洲和中东</h2>
-            <div class="section-divider"></div>
-            <p class="section-subtitle">覆盖非洲和中东的认证检验员网络。</p>
-
-            <div class="coverage-grid">
-                <div class="coverage-card">
-                    <h3>🌍 East Africa</h3>
-                    <p>东非工业基础不断增长，贸易往来日益频繁 with major infrastructure development.</p>
-                    <div class="countries"><span>肯尼亚</span><span>坦桑尼亚</span><span>乌干达</span><span>埃塞俄比亚</span><span>卢旺达</span></div>
-                </div>
-                <div class="coverage-card">
-                    <h3>🌍 West Africa</h3>
-                    <p>西非商业中心成熟，贸易网络发达, particularly in Nigeria and Ghana.</p>
-                    <div class="countries"><span>尼日利亚</span><span>加纳</span><span>科特迪瓦</span><span>塞内加尔</span><span>喀麦隆</span></div>
-                </div>
-                <div class="coverage-card">
-                    <h3>🌍 North Africa</h3>
-                    <p>连接非洲与欧洲和中东的成熟贸易走廊 and the Middle East.</p>
-                    <div class="countries"><span>埃及</span><span>阿尔及利亚</span><span>摩洛哥</span><span>利比亚</span><span>突尼斯</span></div>
-                </div>
-                <div class="coverage-card">
-                    <h3>🌍 Middle East</h3>
-                    <p>海湾主要商业中心和不断增长的工业部门 across the Gulf region.</p>
-                    <div class="countries"><span>沙特阿拉伯</span><span>阿联酋</span><span>卡塔尔</span><span>科威特</span><span>阿曼</span><span>伊拉克</span></div>
-                </div>
-                <div class="coverage-card">
-                    <h3>🌍 Southern Africa</h3>
-                    <p>制造业不断发展的新兴市场 and mining sectors.</p>
-                    <div class="countries"><span>南非</span><span>莫桑比克</span><span>赞比亚</span><span>博茨瓦纳</span><span>纳米比亚</span></div>
-                </div>
-                <div class="coverage-card">
-                    <h3>🌍 Central Africa</h3>
-                    <p>对质量控制服务需求不断增长的新兴市场.</p>
-                    <div class="countries"><span>安哥拉</span><span>刚果民主共和国</span><span>加蓬</span><span>赤道几内亚</span><span>乍得</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 工作流程 (4-step to match novasqc.com) -->
-    <section id="how">
-        <div class="container">
-            <h2 class="section-title">工作流程</h2>
-            <div class="section-divider"></div>
-            <p class="section-subtitle">质量保证是一个复杂的系统！ 但我们会为您处理所有琐碎事务。 其实只需简单的四步。</p>
-
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-num">1</div>
-                    <h4>预约检验</h4>
-                    <p>填写我们的预约表单。告诉我们您的项目详情、服务类型和要求。</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">2</div>
-                    <h4>我们确认</h4>
-                    <p>我们与您的供应商联系，确认检验日期和地址。</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">3</div>
-                    <h4>现场检验</h4>
-                    <p>检验员按计划进行现场检验或审计。</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">4</div>
-                    <h4>出具报告</h4>
-                    <p>您将在12小时内收到图文检验报告。</p>
-                </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>与我们合作的流程是什么？</summary>
+                    <div class="answer">与我们合作共有4个步骤：</div>
+                </details>
+                <details class="faq-item">
+                    <summary>标价之外还有其他费用吗？</summary>
+                    <div class="answer">标价之外没有任何费用！ 我们网站上所有价格均为全包价格。 无任何隐藏费用。 涵盖所有相关费用，如差旅、用餐和报告等。</div>
+                </details>
+                <details class="faq-item">
+                    <summary>我的工厂推荐了一家检验公司？</summary>
+                    <div class="answer">检验公司应该是独立的第三方。 工厂只推荐与他们有关系的检验公司, 这意味着检验员很可能会让不良订单通过。</div>
+                </details>
             </div>
         </div>
     </section>
@@ -840,190 +534,74 @@
         <div class="container">
             <h2 class="section-title">客户评价</h2>
             <div class="section-divider"></div>
-            <p class="section-subtitle">基于来自客户的好评 across Africa and Middle East.</p>
+            <p class="section-subtitle">基于 2000+ 用户评价</p>
 
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"You have earned my respect and gratitude for your efforts to protect your customer in going above and beyond normal expectations!"</p>
-                    <div class="author">— First International 公司名称</div>
+                    <p>"你们超越了我的期望，为保护客户付出了额外的努力，我对此深表敬意和感激！"</p>
+                    <div class="author">— 第一国际公司</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"After working with several inspection companies across Africa and Middle East, I can tell you NovaSQC is tops in their field — a team you can trust!"</p>
-                    <div class="author">— Centric Engineering</div>
+                    <p>"在亚洲与多家检验公司合作后，我可以告诉您，Novas QC 是业内顶尖的——是一支值得信赖的团队！"</p>
+                    <div class="author">— FIZZ公司</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Your inspection report is concise, thorough and very organized. And thank you for the many detailed product photos. I take comfort in knowing you will be there."</p>
-                    <div class="author">— Auto Zone Inc.</div>
+                    <p>"你们的检验报告简洁、详尽且非常有条理。还要感谢你们提供的众多详细产品照片。知道有你们在现场，我很安心。"</p>
+                    <div class="author">— 汽车配件公司</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq">
+    <!-- About Text -->
+    <section class="about-section">
         <div class="container">
-            <h2 class="section-title">常见问题</h2>
-            <div class="section-divider"></div>
-            <p class="section-subtitle">如果您找不到想要的答案, please contact us directly.</p>
-
-            <div class="faq-list">
-                <details class="faq-item">
-                    <summary>与 NovaSQC 合作的流程是什么？</summary>
-                    <div class="answer">合作共有4个步骤：<br><br>1. 填写预约表单： <a href="#contact" style="color:var(--accent)">BOOK NOW</a><br>2. 收到预约表单后，我们与您的供应商联系 to confirm the inspection date and address<br>3. 收取检验费后，我们按计划执行检验<br>4. 检验完成后，您将在12小时内收到检验报告</div>
-                </details>
-                <details class="faq-item">
-                    <summary>标价之外还有其他费用吗？</summary>
-                    <div class="answer">标价之外无任何其他费用！ 我们网站上所有价格均为全包价格。 No hidden cost. 涵盖所有相关费用，如差旅、用餐和报告等。</div>
-                </details>
-                <details class="faq-item">
-                    <summary>我的供应商推荐了他们自己的检验公司。我应该用吗？</summary>
-                    <div class="answer">检验公司应该是独立的第三方。 供应商只会推荐他们有关系的检验公司, 这意味着检验员很可能会让不良订单通过。 NovaSQC 只为买家——您——工作。</div>
-                </details>
-                <details class="faq-item">
-                    <summary>为什么照片看起来和我发的不一样？</summary>
-                    <div class="answer">当我们在中期生产检验或出货前检验期间拍照时, 目标是确保尺寸、材料、颜色、形状、设计、缝线等方面没有差异。 至于颜色深浅、光泽、质地等 — these can be hard to capture via photos due to factory lighting, lack of sunlight, and camera angle. 这就是为什么我们鼓励客户寄送产品样品 so our inspectors can physically compare it during the inspection.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>什么是缺陷？</summary>
-                    <div class="answer">产品未满足预期要求或合理使用期望 or reasonable expectation for use, including safety considerations. 缺陷分为四个等级：<br><br>• <strong>一级（非常严重）:</strong> 直接导致严重人身伤害或重大经济损失<br>• <strong>二级（严重）:</strong> 直接导致重大人身伤害或重大经济损失<br>• <strong>三级（主要）:</strong> 与预期正常使用或可合理预见使用中的重大问题相关<br>• <strong>四级（轻微）:</strong> 与预期正常使用或可合理预见使用中的轻微问题相关</div>
-                </details>
-                <details class="faq-item">
-                    <summary>你们的检验员持有哪些认证？</summary>
-                    <div class="answer">我们的检验员持有包括 API 1169、CWI、NACE 和 ISO 9001 在内的国际认可资质。 所有检验员至少有4年以上现场经验。 Certifications vary by region — contact us for details on specific inspector credentials in your area.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>你们的检验员会说哪些语言？</summary>
-                    <div class="answer">我们的检验员会说英语、法语、葡萄牙语、阿拉伯语、斯瓦希里语、豪萨语、阿姆哈拉语、绍纳语、祖鲁语等。 We match inspectors to your project location to ensure clear communication with all stakeholders.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>我可以取消或重新安排检验吗？</summary>
-                    <div class="answer">Yes. 您可在预定日期前一天当地时间下午4点前免费取消或重新安排检验 the scheduled date at no charge. For urgent reschedules, contact us directly and we will do our best to accommodate your needs.</div>
-                </details>
-            </div>
+            <p class="about-intro" style="text-align:center; margin-bottom:0;">Novas QC 是一家全方位、一站式中国检验机构 在产品检验和供应商审计方面拥有专业能力 涵盖众多不同行业。</p>
         </div>
     </section>
 
-    <!-- Blog Preview -->
-    <section id="blog" style="background: var(--bg-secondary);">
-        <div class="container">
-            <h2 class="section-title">新闻与见解</h2>
-            <div class="section-divider"></div>
-            <p class="section-subtitle">了解质量控制、供应链和检验行业的最新动态。</p>
-
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="date">2026-04-10</div>
-                    <h3>非洲基础设施项目质量创新: NovaSQC's Precise Control of the Inspection Process</h3>
-                    <p>随着非洲基础设施投资的增长, quality control has become a critical factor in project success...</p>
-                    <span class="tag">行业新闻</span>
-                </div>
-                <div class="blog-card">
-                    <div class="date">2026-03-22</div>
-                    <h3>钢铁和管道采购中的贸易风险缓解: Insights from NovaSQC Inspection Expertise</h3>
-                    <p>In an increasingly globalized market, the procurement of industrial materials presents unique challenges...</p>
-                    <span class="tag">贸易洞察</span>
-                </div>
-                <div class="blog-card">
-                    <div class="date">2026-02-18</div>
-                    <h3>Ensuring Safety and Quality in 油气设备: Expert Third-Party Inspection Strategies</h3>
-                    <p>In the dynamic and competitive world of energy infrastructure, ensuring that equipment meets stringent safety standards...</p>
-                    <span class="tag">油气</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
+    <!-- 联系 -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Contact Us</h2>
+            <h2 class="section-title">联系我们</h2>
             <div class="section-divider"></div>
-            <p class="section-subtitle">Ready to start? Contact us and we'll respond within 24 hours.</p>
 
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h3>联系我们</h3>
-                    <p>无论您需要单次检验还是持续质量支持 across Africa and Middle East, our team is ready to help.</p>
+                    <h3>办公室</h3>
+                    <p>East 办公室 Building, 45 Beijing Road, Qianwan Free Trade Port, Qingdao Area, China (Shandong) Pilot Free Trade Zone</p>
 
                     <div class="contact-item">
                         <div class="icon">📧</div>
-                        <div>
-                            <strong>电子邮箱</strong>
-                            <a href="mailto:info@novasqc.com">info@novasqc.com</a>
-                        </div>
+                        <div><strong>邮箱</strong><a href="mailto:info@novasqc.com">info@novasqc.com</a></div>
                     </div>
                     <div class="contact-item">
-                        <div class="icon">📍</div>
-                        <div>
-                            <strong>办公室</strong>
-                            <span>Shenzhen, Guangdong, China<br>Serving Africa & Middle East</span>
-                        </div>
+                        <div class="icon">📧</div>
+                        <div><strong>邮箱</strong><a href="mailto:novasqc@hotmail.com">novasqc@hotmail.com</a></div>
                     </div>
                     <div class="contact-item">
                         <div class="icon">📱</div>
-                        <div>
-                            <strong>WhatsApp</strong>
-                            <a href="https://wa.me/8613061273656">+86 130 6127 3656</a>
-                        </div>
+                        <div><strong>WhatsApp</strong><a href="https://wa.me/8613061273656">+86.130.6127.3656</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <div><strong>电话</strong><a href="tel:+8613061273656">+86.130.6127.3656</a></div>
                     </div>
                     <div class="contact-item">
                         <div class="icon">⏰</div>
-                        <div>
-                            <strong>营业时间</strong>
-                            <span>周一至周六：上午8点 – 下午6点<br>周日：上午11点 – 下午4点</span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">🌍</div>
-                        <div>
-                            <strong>Website</strong>
-                            <a href="https://novasqc.github.io/novasqc-inspection/">novasqc.github.io/novasqc-inspection</a>
-                        </div>
-                    </div>
-                    <div class="social-links" style="margin-top:16px;">
-                        <a href="#" title="Facebook">FB</a>
-                        <a href="#" title="Twitter">X</a>
-                        <a href="#" title="LinkedIn">IN</a>
+                        <div><strong>办公时间</strong><span>周一至周六：上午8点 – 下午6点<br>周日：上午11点 – 下午4点</span></div>
                     </div>
                 </div>
 
                 <form class="contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group"><label>您的姓名 *</label><input type="text" id="name" placeholder="您的姓名" required></div>
-                        <div class="form-group"><label>公司名称</label><input type="text" id="company" placeholder="公司名称 name"></div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group"><label>电子邮箱 *</label><input type="email" id="email" placeholder="your@email.com" required></div>
-                        <div class="form-group"><label>电话</label><input type="tel" id="phone" placeholder="+1 234 567 8900"></div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group"><label>服务类型 *</label>
-                            <select id="service" required>
-                                <option value="">请选择服务...</option>
-                                <option>产品检验</option>
-                                <option>工厂审计</option>
-                                <option>装货检验</option>
-                                <option>服务套餐（月度）</option>
-                                <option>其他</option>
-                            </select>
-                        </div>
-                        <div class="form-group"><label>国家/地区 *</label>
-                            <select id="location" required>
-                                <option value="">请选择国家...</option>
-                                <optgroup label="East Africa"><option>肯尼亚</option><option>坦桑尼亚</option><option>乌干达</option><option>埃塞俄比亚</option><option>卢旺达</option></optgroup>
-                                <optgroup label="West Africa"><option>尼日利亚</option><option>加纳</option><option>科特迪瓦</option><option>塞内加尔</option><option>喀麦隆</option></optgroup>
-                                <optgroup label="North Africa"><option>埃及</option><option>阿尔及利亚</option><option>摩洛哥</option><option>利比亚</option><option>突尼斯</option></optgroup>
-                                <optgroup label="Middle East"><option>沙特阿拉伯</option><option>阿联酋</option><option>卡塔尔</option><option>科威特</option><option>阿曼</option><option>伊拉克</option></optgroup>
-                                <optgroup label="Southern Africa"><option>南非</option><option>莫桑比克</option><option>赞比亚</option><option>博茨瓦纳</option><option>纳米比亚</option></optgroup>
-                                <optgroup label="Central Africa"><option>安哥拉</option><option>刚果民主共和国</option><option>加蓬</option><option>赤道几内亚</option><option>乍得</option></optgroup>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group"><label>项目详情</label><textarea id="message" placeholder="请告诉我们您的项目、需求和时间安排..."></textarea></div>
-                    <button type="submit" class="btn btn-primary form-submit">提交请求</button>
+                    <div class="form-group"><label>您的姓名 *</label><input type="text" id="name" placeholder="您的姓名" required></div>
+                    <div class="form-group"><label>邮箱 *</label><input type="email" id="email" placeholder="your@email.com" required></div>
+                    <div class="form-group"><label>主题</label><input type="text" id="subject" placeholder="主题"></div>
+                    <div class="form-group"><label>留言</label><textarea id="message" placeholder="Your message..."></textarea></div>
+                    <button type="submit" class="btn btn-primary form-submit">Send 留言</button>
                 </form>
             </div>
         </div>
@@ -1032,53 +610,9 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="logo"><img src="../180x60-蓝.png" alt="NovaSQC"></a>
-                    <p>NovaSQC 是您在非洲和中东选择第三方检验服务的最佳选择。 Product inspections, factory audits, and loading supervision — with certified inspectors across the region.</p>
-                    <div class="social-links">
-                        <a href="#">FB</a>
-                        <a href="#">X</a>
-                        <a href="#">IN</a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>服务</h4>
-                    <ul>
-                        <li><a href="#services">产品检验s</a></li>
-                        <li><a href="#services">工厂审计s</a></li>
-                        <li><a href="#services">装货检验</a></li>
-                        <li><a href="#factory-audit">审计详情</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Coverage</h4>
-                    <ul>
-                        <li><a href="#coverage">东非</a></li>
-                        <li><a href="#coverage">西非</a></li>
-                        <li><a href="#coverage">北非</a></li>
-                        <li><a href="#coverage">中东</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>语言</h4>
-                    <ul>
-                        <li><a href="../">English</a></li>
-                        <li><a href="./">中文</a></li>
-                        <li><a href="../fr/">Français</a></li>
-                        <li><a href="../pt/">Português</a></li>
-                        <li><a href="../sw/">Kiswahili</a></li>
-                        <li><a href="../ar/">العربية</a></li>
-                        <li><a href="../ha/">Hausa</a></li>
-                        <li><a href="../am/">አማርኛ</a></li>
-                        <li><a href="../sn/">Shona</a></li>
-                        <li><a href="../zu/">Zulu</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 NovaSQC — 深圳市诺瓦斯检验检测技术服务有限公司 版权所有。</p>
-            </div>
+            <p>NovasQC 是您在中国选择供应链管理服务的最佳选择。</p>
+            <p style="margin-top:12px;"><a href="#faq">常见问题</a> · <a href="#contact">联系</a></p>
+            <p style="margin-top:20px;">© 2026 Novas QC 版权所有</p>
         </div>
     </footer>
 
@@ -1087,13 +621,10 @@
             e.preventDefault();
             var name = document.getElementById('name').value;
             var email = document.getElementById('email').value;
-            var service = document.getElementById('service').value;
-            var location = document.getElementById('location').value;
-            var company = document.getElementById('company').value;
-            var phone = document.getElementById('phone').value;
+            var subject = document.getElementById('subject').value;
             var message = document.getElementById('message').value;
-            var body = encodeURIComponent('Name: ' + name + '\n公司名称: ' + company + '\n电子邮箱: ' + email + '\n电话: ' + phone + '\nService: ' + service + '\nCountry: ' + location + '\n\n项目详情:\n' + message);
-            window.location.href = 'mailto:info@novasqc.com?subject=Inspection Request - ' + service + ' - ' + location + '&body=' + body;
+            var body = encodeURIComponent('Name: ' + name + '\n邮箱: ' + email + '\n\n留言:\n' + message);
+            window.location.href = 'mailto:info@novasqc.com?subject=' + encodeURIComponent(subject || '联系 from NovaSQC Website') + '&body=' + body;
         });
     </script>
 </body>
